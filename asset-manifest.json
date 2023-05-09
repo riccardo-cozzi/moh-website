@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/riccardo-cozzi/moh-website/static/css/main.45470a86.css",
-    "main.js": "/riccardo-cozzi/moh-website/static/js/main.fede055d.js",
-    "static/js/787.28cb0dcd.chunk.js": "/riccardo-cozzi/moh-website/static/js/787.28cb0dcd.chunk.js",
-    "static/media/logo.png": "/riccardo-cozzi/moh-website/static/media/logo.4171358881a48a552c66.png",
-    "index.html": "/riccardo-cozzi/moh-website/index.html",
-    "main.45470a86.css.map": "/riccardo-cozzi/moh-website/static/css/main.45470a86.css.map",
-    "main.fede055d.js.map": "/riccardo-cozzi/moh-website/static/js/main.fede055d.js.map",
-    "787.28cb0dcd.chunk.js.map": "/riccardo-cozzi/moh-website/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/moh-website/static/css/main.45470a86.css",
+    "main.js": "/moh-website/static/js/main.da4cac34.js",
+    "static/js/787.28cb0dcd.chunk.js": "/moh-website/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.png": "/moh-website/static/media/logo.4171358881a48a552c66.png",
+    "index.html": "/moh-website/index.html",
+    "main.45470a86.css.map": "/moh-website/static/css/main.45470a86.css.map",
+    "main.da4cac34.js.map": "/moh-website/static/js/main.da4cac34.js.map",
+    "787.28cb0dcd.chunk.js.map": "/moh-website/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.45470a86.css",
-    "static/js/main.fede055d.js"
+    "static/js/main.da4cac34.js"
   ]
 }
