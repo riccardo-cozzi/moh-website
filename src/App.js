@@ -9,7 +9,7 @@ function App() {
         
         <p>
         <br /><br /><br /> Website under construction 
-        <br/> <small>v 0.1.5</small>
+        <br/> <small>v 0.1.1</small>
         </p>
         <a
           className="App-link"
