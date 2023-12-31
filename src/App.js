@@ -1,37 +1,22 @@
-import logo from './logo.png';
 import './App.css';
 
+import { useState } from 'react';
+import { LanguageContext } from './multilang/LanguageContext';
+import { Languages } from './multilang/Languages';
+import { FloatingLanguageSelector } from './components/LanguageSelectors';
+import HomePage from './pages/HomePage';
+
 function App() {
+  const [currentLanguage, setCurrentLanguage] = useState(Languages.ENG)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        <p>
-        <br /><br /><br /> Website under construction 
-        <br/> <small>v 0.1.1</small>
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/riccardo-cozzi/moh-website/raw/main/starachowice_report_first_step_to_europe.pdf.zip"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          🇪🇺First Step to Europe Poland 🇵🇱
-        </a>
-
-        <br/> 
-
-        <a
-          className="App-link"
-          href="https://github.com/riccardo-cozzi/moh-website/raw/main/drama_report_first_step_to_europe.pdf.zip"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          🇪🇺 First Step to Europe Greece 🇬🇷
-        </a>
-      </header>
-    </div>
+    
+    <>
+    <LanguageContext.Provider value={[currentLanguage, setCurrentLanguage]}>
+        <HomePage />
+        <FloatingLanguageSelector />
+    </LanguageContext.Provider>
+    </>
   );
 }
 
