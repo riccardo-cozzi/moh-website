@@ -90,7 +90,7 @@ const StoryCard = ({title, text, location, onOpen}) => {
       
       <Grid container spacing={0} direction={"row"} alignContent={'space-around'}
             sx={{backgroundColor:"#fff", borderRadius:5, padding:3, opacity:0.7}} >
-          
+              
           <Grid item>
             <Typography gutterBottom variant="h5" component="div">
               {title}

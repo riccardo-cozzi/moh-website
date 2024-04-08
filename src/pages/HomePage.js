@@ -4,13 +4,13 @@ import { getText } from '../multilang/Texts';
 import { Box, Grid } from '@mui/material';
 import Content from './Content';
 import Banner from '../components/Banner';
-import fullbody from '../img/fullbody11.jpg';
+import background from '../img/fullbody11.jpg';
 
 const HomePage = () => {
     
     return <>
         <Box sx={{
-            backgroundImage: `url(${fullbody})`,
+            backgroundImage: `url(${background})`,
             backgroundSize: "cover",
             // backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

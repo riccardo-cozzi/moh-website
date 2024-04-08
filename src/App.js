@@ -5,6 +5,7 @@ import { LanguageContext } from './multilang/LanguageContext';
 import { Languages } from './multilang/Languages';
 import { FloatingLanguageSelector } from './components/LanguageSelectors';
 import HomePage from './pages/HomePage';
+import { WorkinProgress } from './pages/WorkInProgress';
 
 function App() {
   const [currentLanguage, setCurrentLanguage] = useState(Languages.ENG)
@@ -13,8 +14,9 @@ function App() {
     
     <>
     <LanguageContext.Provider value={[currentLanguage, setCurrentLanguage]}>
-        <HomePage />
-        <FloatingLanguageSelector />
+        {/* <HomePage />
+        <FloatingLanguageSelector /> */}
+        <WorkinProgress />
     </LanguageContext.Provider>
     </>
   );
