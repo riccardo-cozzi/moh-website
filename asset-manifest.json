@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.19fd2e2d.css",
-    "main.js": "/static/js/main.3dfeaf0a.js",
+    "main.js": "/static/js/main.dad70834.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/banner_white.png": "/static/media/banner_white.85a1ddad9d9bb7899b74.png",
+    "static/media/MOH child policy.pdf": "/static/media/MOH child policy.f58083a3f236d04fc3ea.pdf",
+    "static/media/banner_white.png": "/static/media/banner_white.9725e254d6d64d6e5dca.png",
     "static/media/fullbody11.jpg": "/static/media/fullbody11.4e1d24e1d53c3c736e00.jpg",
     "static/media/green.jpg": "/static/media/green.8972d4688ff0f5f80af1.jpg",
     "static/media/storyCardTemplateImg.jpg": "/static/media/storyCardTemplateImg.8972d4688ff0f5f80af1.jpg",
     "static/media/logo_transp.png": "/static/media/logo_transp.268cb118158e503164b3.png",
     "index.html": "/index.html",
     "main.19fd2e2d.css.map": "/static/css/main.19fd2e2d.css.map",
-    "main.3dfeaf0a.js.map": "/static/js/main.3dfeaf0a.js.map",
+    "main.dad70834.js.map": "/static/js/main.dad70834.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19fd2e2d.css",
-    "static/js/main.3dfeaf0a.js"
+    "static/js/main.dad70834.js"
   ]
 }
