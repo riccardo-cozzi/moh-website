@@ -30,6 +30,7 @@ export const FloatingLanguageSelector = () => {
     if (language.id !== targetLanguageId) {
         let newLanguage = allLanguages.filter(language => language.id === targetLanguageId)[0]
         setLanguage(newLanguage)
+        console.log("language changed to ", newLanguage)
     }
 }
 

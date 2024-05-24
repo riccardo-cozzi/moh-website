@@ -1,1 +1,1 @@
-### `npm run deploy` to public edits
+### Run `npm run deploy` to public edits

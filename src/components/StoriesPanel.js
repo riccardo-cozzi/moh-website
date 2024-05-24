@@ -1,4 +1,4 @@
-import {forwardRef, useEffect, useState} from 'react';
+import {forwardRef, useContext, useEffect, useState} from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -8,26 +8,28 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Paper, Slide } from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
-import storyCardTemplateImg from '../img/storyCardTemplateImg.jpg';
+import cleanup from '../img/storiesImages/cleanup.jpg';
+import erasmus from '../img/storiesImages/erasmus.jpg';
+import people from '../img/storiesImages/people.png';
+import workers from '../img/storiesImages/workers.jpg';
+import { LanguageContext } from '../multilang/LanguageContext';
+import { getText } from '../multilang/Texts';
 
 
 export const Stories = () => {
 
   const [selectedStory, setSelectedStory] = useState(null)
-
+  const [language, ] = useContext(LanguageContext)
 
   const stories = [
-    // {title: Texts.get(Texts.FIRST_STORY_TITLE), location: Texts.get(Texts.FIRST_STORY_LOCATION), subtitle: Texts.get(Texts.FIRST_STORY_SUBTITLE), text: Texts.get(Texts.FIRST_STORY_TEXT)},
-    {title: "Project 1", location: "Giovinazzo, Italy", subtitle: "This is the first project", text: "This is the story story of the first project in which we are going to talk about the first project and how it is going to be the first project"},
-    {title: "Project 2", location: "Varna, Bulgaria", subtitle: "This is the second project", text: "This is the story story of the second project in which we are going to talk about the second project and how it is going to be the second project"},
-    {title: "Project 3", location: "Vælose, Denmark", subtitle: "This is the third project", text: "This is the story story of the third project in which we are going to talk about the third project and how it is going to be the third project"},
-    {title: "Project 4", location: "Tirana, Albania", subtitle: "This is the fourth project", text: "This is the story story of the fourth project in which we are going to talk about the fourth project and how it is going to be the fourth project"},
-    
+    {title: "Project 1", imgurl: cleanup, location: "Giovinazzo, Italy", subtitle: "This is the first project", text: getText("story_1", language.id)},
+    {title: "Project 2", imgurl: erasmus, location: "Varna, Bulgaria", subtitle: "This is the second project", text: getText("story_2", language.id)},
+    {title: "Project 3", imgurl: people, location: "Vælose, Denmark", subtitle: "This is the third project", text: getText("story_3", language.id)},
+    {title: "Project 4", imgurl: workers, location: "Tirana, Albania", subtitle: "This is the fourth project", text: getText("story_4", language.id)},
   ]
 
   useEffect(() => {
     console.log(selectedStory)
-
   }, [selectedStory])
 
   const closeDialog = () => {
@@ -49,6 +51,7 @@ export const Stories = () => {
                                 text={story.text} 
                                 location={story.location}
                                 onOpen={() => handleChangeStory(story)}
+                                imgurl={story.imgurl}
                                 />
                           </Grid>
               })
@@ -59,64 +62,87 @@ export const Stories = () => {
   </>
 }
 
-const StoryCard = ({title, text, location, onOpen}) => {
+
+
+const StoryCard = ({title, text, location, onOpen, imgurl}) => {
 
   const [hover, setHover] = useState(false)
 
+  const glassBox = {
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))",
+    borderRadius: "20px",
+    boxShadow: "0px 0px 20px rgba(128, 128, 128, 0.3)",
+    backdropFilter: "blur(20px)",
+    border: "2px solid rgba(255, 255, 255, 0.1)",
+    cursor: "pointer", 
+    marginRight:80, 
+    marginLeft:80, 
+    paddingTop:50,
+    paddingBottom:100
+}
+
+  const backgroundImage = {
+    borderRadius: "30px",
+    backgroundImage: `url(${imgurl})`,
+  }
+
+  const blurredBox = {
+    paddingTop:100,
+    paddingBottom:100,
+    borderRadius: "30px",
+    backdropFilter: "blur(10px)",
+    background: "rgba(0, 0, 0, 0.2)",
+  }
+
+
+  
   return <>
-  <Paper sx={{
-      borderRadius: 5, 
-      justifyContent: "center", 
-      alignItems: "center", 
-      display: "flex", 
-      height: "50vh",
-      marginLeft:3, marginRight:3,
-      padding:3,
-      boxShadow: hover ? 20 : 5,
-      cursor: "pointer",
+    <Box style={backgroundImage}>
+      <Box style={blurredBox}>
 
-      backgroundImage: `url(${storyCardTemplateImg})`,
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundBlendMode: "multiply",
-      backgroundPosition: "center",
-      color: "#000",
-
-  }}
-  onMouseEnter={() => setHover(true)}
-  onMouseLeave={() => setHover(false)}
-  onClick={() => onOpen()}
-  >
-      
-      <Grid container spacing={0} direction={"row"} alignContent={'space-around'}
-            sx={{backgroundColor:"#fff", borderRadius:5, padding:3, opacity:0.7}} >
+      <Box 
+        style={glassBox}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onClick={() => onOpen()}
+      >
+        
+        <Grid container spacing={0} direction={"row"} alignContent={'space-around'}>
+                
+            <Grid item>
+              <Typography gutterBottom variant="h5" component="div">
+                {title}
+              </Typography>
               
-          <Grid item>
-            <Typography gutterBottom variant="h5" component="div">
-              {title}
-            </Typography>
+              <Typography variant="body">
+                {text}
+              </Typography>
+            </Grid>
             
-            <Typography variant="body">
-              {text}
-            </Typography>
-          </Grid>
-          
-          <Grid item>
-            <br/><br/>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-            }}>
-                <PlaceIcon fontSize="small"/>
-                <Typography variant="caption">
-                  {location} 
-                </Typography>
-            </div>  
-          </Grid>
-          
-      </Grid>
-  </Paper>
+            <Grid item>
+              <br/><br/>
+              <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexWrap: 'wrap',
+              }}>
+                  <PlaceIcon fontSize="small"/>
+                  <Typography variant="caption">
+                    {location} 
+                  </Typography>
+              </div>  
+            </Grid>
+            
+        </Grid>
+        </Box>
+        </Box>
+
+  </Box>
 </>
 }
 
@@ -151,7 +177,7 @@ const StoryDialog = ({story, onClose, ...props}) => {
           <Grid container spacing={0}>
             
             <Grid item xs={12}>
-              <img src={storyCardTemplateImg} style={{maxHeight:350, width: "100%", borderRadius:5}}/> 
+              <img src={story.imgurl} style={{maxHeight:350, width: "100%", borderRadius:5}}/> 
             </Grid>
             
             <Grid item>
