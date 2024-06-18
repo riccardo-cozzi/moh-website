@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.19fd2e2d.css",
-    "main.js": "/static/js/main.1ab5700f.js",
+    "main.js": "/static/js/main.7ecd30ae.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/MOH child policy.pdf": "/static/media/MOH child policy.f58083a3f236d04fc3ea.pdf",
     "static/media/banner_white.png": "/static/media/banner_white.9725e254d6d64d6e5dca.png",
@@ -21,8 +21,8 @@
     "static/media/erasmus.jpg": "/static/media/erasmus.1bd21cb703c717b4e6c7.jpg",
     "static/media/geyc.jpg": "/static/media/geyc.3866baa3c049716a48b4.jpg",
     "static/media/worldrise.png": "/static/media/worldrise.58a56c584886e2493f0d.png",
+    "static/media/fullbody3.jpg": "/static/media/fullbody3.4bd59dff61d14835d057.jpg",
     "static/media/natedu.jpg": "/static/media/natedu.b2ef8288da38113fd1b4.jpg",
-    "static/media/fullbody2.jpg": "/static/media/fullbody2.97763fda77c0ba96ae15.jpg",
     "static/media/ventidiscambio.png": "/static/media/ventidiscambio.f0d3e3fcffb3080ab693.png",
     "static/media/DeepHero.ttf": "/static/media/DeepHero.b462835fe9f604f617c7.ttf",
     "static/media/worldcleanup.jpg": "/static/media/worldcleanup.3ba858100b67d4497149.jpg",
@@ -58,11 +58,11 @@
     "static/media/caos.webp": "/static/media/caos.c1346ec61c93a3b85c26.webp",
     "index.html": "/index.html",
     "main.19fd2e2d.css.map": "/static/css/main.19fd2e2d.css.map",
-    "main.1ab5700f.js.map": "/static/js/main.1ab5700f.js.map",
+    "main.7ecd30ae.js.map": "/static/js/main.7ecd30ae.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19fd2e2d.css",
-    "static/js/main.1ab5700f.js"
+    "static/js/main.7ecd30ae.js"
   ]
 }
