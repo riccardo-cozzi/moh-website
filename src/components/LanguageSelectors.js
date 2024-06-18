@@ -10,13 +10,13 @@ import { Languages } from '../multilang/Languages';
 const FABStyle = {
   margin: 0,
   top: 20,
-  left: 20,
+  right: 20,
   bottom: 'auto',
-  right: 'auto',
+  left: 'auto',
   position: 'fixed',
 }
 
-const background_selected = "#ddd"
+const background_selected = "#0aa"
 const background_unselected = "#fff"
 
 
@@ -40,17 +40,22 @@ export const FloatingLanguageSelector = () => {
         ariaLabel="SpeedDial basic example"
         icon={<TranslateIcon />}
         direction={"down"}
+        FabProps={{sx: { 
+          color:"black",
+          background:"white",
+          ":hover": {
+            background:"#ddd",
+          }
+        }}}
       >
         {
           Object.keys(allLanguages).map((languageKey) => {
             let isSelected = allLanguages[languageKey].id === language.id
             return (
               <SpeedDialAction
-                sx={isSelected ? 
-                    {color: "black", background: background_selected}
-                  : {color: "black", background: background_unselected}
-
-                }
+                sx={{
+                  color: "black", background: isSelected ? background_selected : background_unselected
+                }}
                 
                 key={allLanguages[languageKey].id}
                 icon={allLanguages[languageKey].flag}

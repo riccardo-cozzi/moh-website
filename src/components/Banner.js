@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import logo_transp from '../img/logo_transp.png';
-import banner from '../img/banner_white.png';
 
 import { 
     Grid, 
@@ -12,22 +11,41 @@ const Banner = () => {
     return <>
         <Box sx={{
             borderRadius: 0, 
-            justifyContent: "center", 
-            alignItems: "center", 
+            // justifyContent: "right", 
+            // alignItems: "right", 
             display: "flex", 
             height: "80vh",
+            paddingTop:10, 
         }}
             >
             
-            <Grid container spacing={2} direction={"row"}>
-
-                <Grid item xs={12} sx={{justifyContent:"center", justifyItems:"center", display:"flex"}}>
-                    <img src={logo_transp} style={{
-                        width: "30%",
-                    }}/>
+            <Grid container spacing={2} direction={"column"}
+                sx={{
+                    padding:10,
+                }}
+            >
+                
+                <Grid item xs={6} md={12}
+                    sx={{
+                        justifyContent:"center", 
+                        justifyItems:"center", 
+                        alignItems: 'center',
+                        display:"flex"
+                    }}>
+                    <Typography variant="h1" fontSize={80} align='center'>
+                        Mobility <br/> Opportunities <br/> Happening
+                    </Typography>
                 </Grid>
-                <Grid item xs={12} sx={{justifyContent:"center", justifyItems:"center", display:"flex"}}>
-                    <Typography variant="h2" fontSize={50}>Mobility Opportunities Happening</Typography>
+
+                <Grid item xs={6} md={12}
+                    sx={{
+                        justifyContent:"center", 
+                        justifyItems:"center", 
+                        display:"flex"
+                    }}>
+                        <img src={logo_transp} style={{
+                            width: "auto",
+                        }}/>
                 </Grid>
                 
             </Grid>

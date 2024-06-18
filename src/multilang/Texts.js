@@ -9,21 +9,27 @@ export const getText = (id, lang) => {
 }
 
 const texts = {
-    "text_1": {
+    "principle_1": {
         "ITA": "Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni.  Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. ",
         "ENG": "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses.",
         "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes.",
     },
-    "text_2": {
-        "ITA": "Prova prova prova",
-        "ENG": "test test test",
-        "ESP": "prueba prueba prueba",
+    "principle_1": {
+        "ITA": "Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni.  Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. ",
+        "ENG": "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses.",
+        "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes.",
     },
+    "principle_1": {
+        "ITA": "Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni.  Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. ",
+        "ENG": "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses.",
+        "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes.",
+    },
+    
 
     // --- INFOBOX ---
 
     "infobox_1": {
-        "ITA": "Questo è un testo in italiano di prova. Se cambi il selettore della lingua questo testo verrà tradotto nella lingua a tua scelta.",
+        "ITA": "Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. ",
         "ESP": "Miralo que se avecina A la vuelta de la esquina Viene Diego rumbeando Con la luna en las pupilas Y su traje agua marina Van restos de contrabando",
         "ENG":  "This is a test text in English. If you change the language selector this text will be translated into the language of your choice."
     },
@@ -35,29 +41,29 @@ const texts = {
     "infobox_3": {
         "ITA": "Questo è un testo in italiano di prova. Se cambi il selettore della lingua questo testo verrà tradotto nella lingua a tua scelta.",
         "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. ",
-        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. ."
+        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses."
     },
 
     // --- STORIES ---
     "story_1": {
         "ITA": "Questo è un testo in italiano di prova. Se cambi il selettore della lingua questo testo verrà tradotto nella lingua a tua scelta.",
         "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. ",
-        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. ."
+        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses."
     },
     "story_2": {
         "ITA": "Questo è un testo in italiano di prova. Se cambi il selettore della lingua questo testo verrà tradotto nella lingua a tua scelta.",
         "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. ",
-        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. ."
+        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses."
     },
     "story_3": {
         "ITA": "Questo è un testo in italiano di prova. Se cambi il selettore della lingua questo testo verrà tradotto nella lingua a tua scelta.",
         "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. ",
-        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. ."
+        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses."
     },
     "story_4": {
         "ITA": "Questo è un testo in italiano di prova. Se cambi il selettore della lingua questo testo verrà tradotto nella lingua a tua scelta.",
         "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. ",
-        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. ."
+        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses."
     },
 
 }

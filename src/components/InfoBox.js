@@ -8,9 +8,10 @@ import {
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
-import logo_transp from '../img/logo_transp.png';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+import PublicIcon from '@mui/icons-material/Public';
+import RecyclingIcon from '@mui/icons-material/Recycling';
 
-import { styled } from '@mui/material/styles';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText } from '../multilang/Texts';
 
@@ -26,16 +27,16 @@ const InfoBoxesPanel = () => {
 
 
     const info = [
-        {icon: <AcUnitIcon style={{fontSize: "10rem"}}/>, text: getText("infobox_1", language.id)},
-        {icon: <AccessibleForwardIcon style={{fontSize: "10rem"}}/>, text: getText("infobox_2", language.id)},
-        {icon: <AddLocationAltIcon style={{fontSize: "10rem"}}/>,text: getText("infobox_3", language.id)},
+        {icon: <HandshakeIcon style={{fontSize: "10rem"}}/>, text: getText("infobox_1", language.id)},
+        {icon: <PublicIcon style={{fontSize: "10rem"}}/>, text: getText("infobox_2", language.id)},
+        {icon: <RecyclingIcon style={{fontSize: "10rem"}}/>,text: getText("infobox_3", language.id)},
     ]
 
     return <Grid container spacing={2} direction={"row"}>
 
             {
                 info.map((item, index) => {
-                    return <Grid item xs={12 / info.length} key={index}>
+                    return <Grid item xs={12} md={12 / info.length} key={index}>
                                 <InfoBox icon={item.icon} text={item.text}/>
                             </Grid>
                 })
@@ -55,23 +56,25 @@ const InfoBox = ({icon, text}) => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background: "linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3))",
+        background: "rgba(255, 255, 255, 1)",
         borderRadius: "30px",
         boxShadow: "0px 0px 20px rgba(128, 128, 128, 0.3)",
         backdropFilter: "blur(20px)",
         border: "4px solid rgba(255, 255, 255, 0.2)",
-        cursor: "pointer", 
+        // cursor: "pointer",  // per rendere le card cliccabili
     }
 
-    const hoveredGlassBox = {
-        ...glassBox, 
-        boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.5)",
-    }
+    // const hoveredGlassBox = { // per rendere le card cliccabili
+    //     ...glassBox, 
+    //     boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.4)",
+    // }
     
     return <>
-    <Paper style={hover ? hoveredGlassBox : glassBox}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+    <Paper 
+        style={glassBox}
+        // style={hover ? hoveredGlassBox : glassBox} // per rendere le card cliccabili
+        // onMouseEnter={() => setHover(true)}
+        // onMouseLeave={() => setHover(false)}
     >
         <Grid container spacing={2} direction={"row"}>
             <Grid item xs={12} sx={{justifyContent:"center", justifyItems:"center", display:"flex"}}>

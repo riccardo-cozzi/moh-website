@@ -1,9 +1,5 @@
 import {forwardRef, useContext, useEffect, useState} from 'react';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import {Button, Stack} from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Paper, Slide } from '@mui/material';
@@ -14,9 +10,10 @@ import people from '../img/storiesImages/people.png';
 import workers from '../img/storiesImages/workers.jpg';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText } from '../multilang/Texts';
+import { BorderLeftRounded } from '@mui/icons-material';
 
 
-export const Stories = () => {
+const Stories = () => {
 
   const [selectedStory, setSelectedStory] = useState(null)
   const [language, ] = useContext(LanguageContext)
@@ -41,11 +38,11 @@ export const Stories = () => {
   }
 
   return <>
+      
       <Grid container spacing={5} direction={"row"} sx={{paddingLeft: 10, paddingRight: 10}}>
-
           {
               stories.map((story, index) => {
-                  return <Grid item xs={6} key={index}>
+                  return <Grid item xs={12} md={6} key={index}>
                               <StoryCard 
                                 title={story.title} 
                                 text={story.text} 
@@ -68,82 +65,75 @@ const StoryCard = ({title, text, location, onOpen, imgurl}) => {
 
   const [hover, setHover] = useState(false)
 
-  const glassBox = {
-    padding: "20px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    background: "linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))",
-    borderRadius: "20px",
-    boxShadow: "0px 0px 20px rgba(128, 128, 128, 0.3)",
-    backdropFilter: "blur(20px)",
-    border: "2px solid rgba(255, 255, 255, 0.1)",
-    cursor: "pointer", 
-    marginRight:80, 
-    marginLeft:80, 
-    paddingTop:50,
-    paddingBottom:100
-}
-
-  const backgroundImage = {
-    borderRadius: "30px",
+  const imageBox = {
+    borderRadius: "200px 0px 50px 200px",
     backgroundImage: `url(${imgurl})`,
+    paddingRight: 200,
+    width: "50%"
   }
 
-  const blurredBox = {
-    paddingTop:100,
-    paddingBottom:100,
-    borderRadius: "30px",
-    backdropFilter: "blur(10px)",
-    background: "rgba(0, 0, 0, 0.2)",
+  const hoverImageBox = {
+    ...imageBox, 
   }
-
-
   
-  return <>
-    <Box style={backgroundImage}>
-      <Box style={blurredBox}>
+  const storyCardStyle = {
+    borderRadius:"50px",
+     paddingTop:50,
+     paddingBottom:0,
+     paddingLeft:50,
+     height:300,
+     cursor:"pointer",
+  }
 
-      <Box 
-        style={glassBox}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        onClick={() => onOpen()}
-      >
+  const hoveredStoryCardStyle = {
+    ...storyCardStyle, 
+    background: "rgba(232, 237, 247)"
+  }
+
+
+return <Paper style={hover ? hoveredStoryCardStyle : storyCardStyle} 
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              onClick={() => onOpen()}
+              elevation={hover? 20 : 10}>
+
+    <Stack direction="row" spacing={10} height={"100%"}>
+
+      {/* Content */}
+      <Stack justifyContent={"space-between"} paddingBottom={5}>
         
-        <Grid container spacing={0} direction={"row"} alignContent={'space-around'}>
-                
-            <Grid item>
-              <Typography gutterBottom variant="h5" component="div">
-                {title}
-              </Typography>
-              
-              <Typography variant="body">
-                {text}
-              </Typography>
-            </Grid>
-            
-            <Grid item>
-              <br/><br/>
-              <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexWrap: 'wrap',
-              }}>
-                  <PlaceIcon fontSize="small"/>
-                  <Typography variant="caption">
-                    {location} 
-                  </Typography>
-              </div>  
-            </Grid>
-            
-        </Grid>
-        </Box>
+        <Box>
+          <Typography gutterBottom variant="h4" component="div">
+            {title}
+          </Typography>
+
+          <Typography variant="h7" color={"gray"}>
+            {text}
+          </Typography>
         </Box>
 
-  </Box>
-</>
+        
+        <br/><br/>
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            bottom:0
+        }}>
+            <PlaceIcon fontSize="small" style={{color: "gray"}}/>
+            <Typography variant="caption" color={"gray"}>
+              {location} 
+            </Typography>
+        </div>  
+      </Stack>
+
+      {/* Image */}
+      <Box style={hover ? hoverImageBox : imageBox}/>
+    </Stack>
+    
+  
+</Paper>
+
 }
 
 
@@ -160,8 +150,7 @@ const StoryDialog = ({story, onClose, ...props}) => {
     onClose()
   };
 
-  
- 
+
   return (
     open ?
       <Dialog
@@ -209,3 +198,5 @@ const StoryDialog = ({story, onClose, ...props}) => {
     <></>
   )
 }
+
+export default Stories
