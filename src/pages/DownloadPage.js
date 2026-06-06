@@ -7,6 +7,7 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import FolderZipIcon from '@mui/icons-material/FolderZip';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import config from '../config.json';
+import { gradientTitle } from '../styles';
 
 const getFileIcon = (filename) => {
     if (filename.endsWith('.zip'))
@@ -19,17 +20,19 @@ export const DownloadPage = () => {
         <Box sx={{
             minHeight: '100vh',
             backgroundSize: 'cover',
+            backgroundPosition: 'center',
             backgroundImage: `url(${background})`,
             backgroundRepeat: 'no-repeat',
         }}>
             <Box sx={{
                 minHeight: '100vh',
-                backdropFilter: 'blur(60px)',
+                backdropFilter: 'blur(10px)',
+                backgroundColor: 'rgba(255, 255, 255, 0.75)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                px: { xs: 2, sm: 4 },
+                px: { xs: 2, sm: 6, md: 10 },
                 py: 6,
             }}>
                 {/* Header */}
@@ -38,11 +41,8 @@ export const DownloadPage = () => {
                     alt="logo"
                     style={{ width: 90, height: 90, marginBottom: 16 }}
                 />
-                <Typography variant="h4" sx={{ color: '#1a1a1a', fontWeight: 'bold', mb: 1 }}>
+                <Typography variant="h3" align="center" sx={{ ...gradientTitle, mb: 1 }}>
                     Downloads
-                </Typography>
-                <Typography variant="body1" sx={{ color: 'rgba(0,0,0,0.55)', mb: 4, textAlign: 'center' }}>
-                    Scarica i documenti ufficiali del progetto
                 </Typography>
 
                 {/* File cards */}

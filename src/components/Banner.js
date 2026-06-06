@@ -10,6 +10,8 @@ import {
 } from '@mui/material';
 import { gradientTitle } from '../styles';
 
+
+
 const Banner = () => {
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -59,7 +61,8 @@ const Banner = () => {
                                 // display:"flex"
                             }}>
                                 <Typography variant="h1" fontSize={40} align='center' sx={{ ...gradientTitle, width: '100%' }}>
-                                    Mobility Opportunities <br/> Happening
+                                    {/* Mobility Opportunities <br/> Happening */}
+                                    Website in construction
                                 </Typography>                    
                         </Grid>
                     </Grid>
@@ -74,7 +77,8 @@ const Banner = () => {
                                 display:"flex"
                             }}>
                                 <Typography variant="h1" fontSize={100} sx={gradientTitle}>
-                                    Mobility <br/> Opportunities <br/> Happening
+                                    {/* Mobility <br/> Opportunities <br/> Happening */}
+                                    Website in construction
                                 </Typography>                    
                         </Grid>
 

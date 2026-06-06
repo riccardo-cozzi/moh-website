@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import config from '../config.json';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText } from '../multilang/Texts';
+import { GRADIENT, gradientButtonSx, gradientTitle } from '../styles';
 import { 
     Box,
     Stack,
@@ -131,9 +132,8 @@ const Contacts = () => {
               PaperProps={{sx: {height: 700, width: 600, overflow: 'hidden', borderRadius: 5}}}
             >
                 <DialogTitle>
-                    <Stack direction={"row"} spacing={40}>
-                        <Typography fontSize={40}>Contact us!</Typography>
-                        
+                    <Stack direction={"row"} justifyContent="space-between" alignItems="center">
+                        <Typography fontSize={30} sx={gradientTitle}>{getText("contact_card_title", language.id)}</Typography>
                         <Typography color="gray">
                             <CloseIcon sx={{cursor:"pointer"}} onClick={handleClose}/>
                         </Typography>
@@ -162,32 +162,21 @@ const Contacts = () => {
                             </Typography>
                         </Stack>
     
-                        <Button onClick={handleSend} fullWidth size="large" variant='contained'>{getText("contact_send_button", language.id)}</Button>
+                        <Button
+                            onClick={handleSend}
+                            fullWidth
+                            size="large"
+                            variant='contained'
+                            sx={gradientButtonSx}
+                        >
+                            {getText("contact_send_button", language.id)}
+                        </Button>
                     </Stack>
     
                 </DialogContent>
                 
             </Dialog>            
-          
         
-          {/* <Snackbar
-            open={sent}
-            autoHideDuration={3000}
-            onClose={handleCloseSnack}
-            message="This Snackbar will be dismissed in 5 seconds."
-            severity="success"
-            variant="outlined"
-            >
-                <Alert
-                    onClose={handleCloseSnack}
-                    severity="success"
-                    variant="outlined"
-                    sx={{ width: '100%', backgroundColor:"rgba(0, 255, 0, 0.2)" }}
-                >
-                    Your message has been sent succesfully
-                </Alert>
-            </Snackbar> */}
-       
         
     </>
 }
