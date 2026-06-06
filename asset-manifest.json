@@ -1,25 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.19fd2e2d.css",
-    "main.js": "/static/js/main.455855c9.js",
+    "main.css": "/static/css/main.8adf20bc.css",
+    "main.js": "/static/js/main.83c6e57a.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/MOH child policy firmato.pdf": "/static/media/MOH child policy firmato.db7df87098d18690aead.pdf",
     "static/media/icpi.jpg": "/static/media/icpi.c3d22d37123caedc65e0.jpg",
     "static/media/vogliamosantospirito.jpeg": "/static/media/vogliamosantospirito.8948e273dd9bb4e672a6.jpeg",
+    "static/media/logo_transp.png": "/static/media/logo_transp.33cf04850c695c93ba1b.png",
     "static/media/copenhagenyouthnetwork.jpg": "/static/media/copenhagenyouthnetwork.4f9ec372e6044e3b0db7.jpg",
     "static/media/rot.jpg": "/static/media/rot.bd0327bc2f81202ed966.jpg",
     "static/media/sdgt.png": "/static/media/sdgt.1e6abd3e7bfd87c8532f.png",
     "static/media/rivercleanup.png": "/static/media/rivercleanup.ecbae56a9bd35240494e.png",
     "static/media/backtotheroots.jpg": "/static/media/backtotheroots.73786023a4d6152349bb.jpg",
-    "static/media/people.png": "/static/media/people.7b67488d8aa759771f55.png",
     "static/media/precious.jpg": "/static/media/precious.a2ab846c2811da9b4d34.jpg",
-    "static/media/logo_transp.png": "/static/media/logo_transp.268cb118158e503164b3.png",
     "static/media/xuventude.png": "/static/media/xuventude.d232b84b24921582c0e2.png",
     "static/media/faro.jpg": "/static/media/faro.f2c220e1733eadc1a91c.jpg",
     "static/media/savethesea.jpg": "/static/media/savethesea.5ab3d95f975331adb9b5.jpg",
-    "static/media/erasmus.jpg": "/static/media/erasmus.1bd21cb703c717b4e6c7.jpg",
     "static/media/geyc.jpg": "/static/media/geyc.3866baa3c049716a48b4.jpg",
     "static/media/worldrise.png": "/static/media/worldrise.58a56c584886e2493f0d.png",
+    "static/media/Neogen-Black.ttf": "/static/media/Neogen-Black.59c7e16ca4ea5875141d.ttf",
     "static/media/fullbody3.jpg": "/static/media/fullbody3.4bd59dff61d14835d057.jpg",
     "static/media/natedu.jpg": "/static/media/natedu.b2ef8288da38113fd1b4.jpg",
     "static/media/ventidiscambio.png": "/static/media/ventidiscambio.f0d3e3fcffb3080ab693.png",
@@ -28,11 +26,9 @@
     "static/media/threeplace.jpg": "/static/media/threeplace.2d04a861a1aede53c77d.jpg",
     "static/media/yee.jpg": "/static/media/yee.601059a0420ccb96b5cb.jpg",
     "static/media/santasevera.jpg": "/static/media/santasevera.a2a18aa9e9c31c60b89c.jpg",
-    "static/media/cleanup.jpg": "/static/media/cleanup.fe78cf74dafd37e548c5.jpg",
     "static/media/puliam.jpg": "/static/media/puliam.0e74970db50b897e4c6d.jpg",
     "static/media/northern.jpeg": "/static/media/northern.e490fb52fe24efc40ca5.jpeg",
     "static/media/surfrider.png": "/static/media/surfrider.b690d78ac328fe3f0be9.png",
-    "static/media/workers.jpg": "/static/media/workers.ec03a507fc4593da3573.jpg",
     "static/media/coconutwork.jpg": "/static/media/coconutwork.4c0f75e9ca9aa179a04e.jpg",
     "static/media/wwf.jpg": "/static/media/wwf.d15efa019a9ae4d364a2.jpg",
     "static/media/teatro.png": "/static/media/teatro.2d25d922682a5d357ac2.png",
@@ -56,12 +52,12 @@
     "static/media/quarantine.jpg": "/static/media/quarantine.ab1565d00896a069caf6.jpg",
     "static/media/caos.webp": "/static/media/caos.c1346ec61c93a3b85c26.webp",
     "index.html": "/index.html",
-    "main.19fd2e2d.css.map": "/static/css/main.19fd2e2d.css.map",
-    "main.455855c9.js.map": "/static/js/main.455855c9.js.map",
+    "main.8adf20bc.css.map": "/static/css/main.8adf20bc.css.map",
+    "main.83c6e57a.js.map": "/static/js/main.83c6e57a.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19fd2e2d.css",
-    "static/js/main.455855c9.js"
+    "static/css/main.8adf20bc.css",
+    "static/js/main.83c6e57a.js"
   ]
 }
