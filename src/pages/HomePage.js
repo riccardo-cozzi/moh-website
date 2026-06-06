@@ -17,11 +17,15 @@ const HomePage = () => {
             // background: 'linear-gradient(#fff, #fff)',
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
+            // backgroundSize: "100%",
             backgroundSize: "100% 100%",
-            backgroundPosition: "left",
+            // backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
         }}>
-            <Box sx={{backdropFilter: 'blur(50px)',}}>
+            <Box sx={{
+                backdropFilter: 'blur(10px)',
+                backgroundColor: 'rgba(255, 255, 255, 0.75)',
+            }}>
 
                 <Grid container spacing={20}>
                     <Grid item xs={12} >
@@ -29,34 +33,31 @@ const HomePage = () => {
                     </Grid>
                     
                     <Grid item xs={12} >
-                        <Grid container spacing={10}>
-
+                        <Grid container spacing={10} direction="column" alignItems="center" sx={{ px: { xs: 2, sm: 6, md: 10 } }}>
 
                             {/* Info Boxes */}
-                            
-                            <Grid item sx={{marginLeft:10, marginRight:10}} > 
+                            <Grid item sx={{ width: '100%' }} > 
                                 <InfoBoxes /> 
                             </Grid>
 
                             {/* Stories */}
-                            
-                            <Grid item > 
-                                <Box sx={{marginLeft:0, marginRight:0}}> 
-                                    <Typography variant="h3" align='center' margin={10}> Our stories </Typography>
+                            <Grid item sx={{ width: '100%' }} > 
+                                <Box> 
+                                    <Typography variant="h3" align='center' margin={10} sx={{ fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}> Our stories </Typography>
                                     <Stories /> 
                                 </Box> 
                             </Grid>
 
                             {/* Partners */}
-                            <Grid item > 
-                                <Box sx={{marginLeft:10, marginRight:10}}> 
-                                    <Typography variant="h3" align='center' margin={10}> Our partnerships </Typography>
+                            <Grid item sx={{ width: '100%', px: 10 }} > 
+                                <Box> 
+                                    <Typography variant="h3" align='center' margin={10} sx={{ fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}> Our partnerships </Typography>
                                     <Partners /> 
                                 </Box> 
                             </Grid>
 
                             {/* Contacts */}
-                            <Grid item xs={12}> <Contacts /> </Grid>
+                            <Grid item sx={{ width: '100%' }}> <Contacts /> </Grid>
                         </Grid>
                     </Grid>
                 </Grid>

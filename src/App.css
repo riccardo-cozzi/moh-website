@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: 'Neogen';
+  src: url('./fonts/Neogen-Black.ttf') format('truetype');
+}
+
 .App {
   text-align: center;
 }

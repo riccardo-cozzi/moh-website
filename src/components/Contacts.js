@@ -1,4 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
+import config from '../config.json';
+import { LanguageContext } from '../multilang/LanguageContext';
+import { getText } from '../multilang/Texts';
 import { 
     Box,
     Stack,
@@ -16,18 +19,24 @@ import CloseIcon from '@mui/icons-material/Close';
 const contactBoxStyle = {
     justifyContent: "center", 
     alignItems: "center", 
-    display: "flex", 
-    height: "50vh"
+    display: "flex",
+    flexDirection: "row",
+    gap: "16px",
+    padding: "24px 40px",
 }
 
 const contactsSectionStyle = {
-    borderRadius:"100px",
-    margin:"100px",
-    cursor: "pointer"
+    borderRadius: "20px",
+    margin: "40px auto",
+    cursor: "pointer",
+    background: "linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)",
+    transition: "transform 0.2s, box-shadow 0.2s",
+    display: "table",
 }
 
 
 const Contacts = () => {
+    const [language, ] = useContext(LanguageContext)
     const [dialogOpen, setDialogOpen] = useState(false)
     const [charCount, setCharCount] = useState(0)
     const [sent, setSent] = useState(false)
@@ -36,10 +45,11 @@ const Contacts = () => {
         name: "", 
         email: "",
         nationality: "",
+        organisation: "",
         message: ""
     }
     const [formData, setFormData] = useState(defaultFormData)
-    const maxChar = 5;   
+    const maxChar = 255;   
 
    
     const handleClose = () => {
@@ -55,14 +65,21 @@ const Contacts = () => {
     }
 
     const handleSend = () => {
-        setSent(true)
+        const nationalityPart = formData.organisation
+            ? `${formData.nationality}, ${formData.organisation}`
+            : formData.nationality
+        const subject = encodeURIComponent(`Contact from ${formData.name} (${nationalityPart})`)
+        const body = encodeURIComponent(
+            `Name: ${formData.name}\nNationality: ${formData.nationality}${formData.organisation ? `\nOrganisation: ${formData.organisation}` : ''}\nSender: ${formData.email}\n\n${formData.message}`
+        )
+        window.open(`mailto:${config.contactEmail}?subject=${subject}&body=${body}`)
         handleClose()
-        console.log("Sending data: ", formData)
     }
 
     const handleChangeName = (event) => setFormData({...formData, name: event.target.value })
     const handleChangeEmail = (event) => setFormData({...formData, email: event.target.value})
     const handleChangeNationality = (event) => setFormData({...formData, nationality: event.target.value, })
+    const handleChangeOrganisation = (event) => setFormData({...formData, organisation: event.target.value })
     const handleChangeMessage = (event) => setFormData({...formData, message: event.target.value, })
 
     
@@ -77,23 +94,32 @@ const Contacts = () => {
         if (formData.nationality.length > maxChar) {
             setFormData({...formData, nationality: formData.nationality.slice(0, maxChar)})
         }
+        if (formData.organisation.length > maxChar) {
+            setFormData({...formData, organisation: formData.organisation.slice(0, maxChar)})
+        }
         if (formData.message.length > maxChar) {
             setFormData({ ...formData, message: formData.message.slice(0, maxChar)})
             setCharCount(maxChar)
+        } else {
+            setCharCount(formData.message.length)
         }
     }, [formData])
 
 
     return <>
-        <Paper elevation={20} style={contactsSectionStyle} onClick={handleOpen}>
+        <Paper
+            elevation={20}
+            style={contactsSectionStyle}
+            onClick={handleOpen}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3)' }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '' }}
+        >
             <Stack style={contactBoxStyle}>
-                <Typography variant='h2'>
-                    Contact us
+                <MailOutlineIcon style={{ width: "32px", height: "32px", color: "rgba(255,255,255,0.85)" }} />
+                <Typography variant='h5' sx={{ fontFamily: 'Neogen', color: 'white' }}>
+                    {getText("contact_card_title", language.id)}
                 </Typography>
-                
-                <Box>
-                    <MailOutlineIcon style={{width:"100px", height:"100px", color:"#bbb"}}/>
-                </Box>
+               
             </Stack>
         </Paper>
 
@@ -118,18 +144,17 @@ const Contacts = () => {
                 <DialogContent>
                    
                     <DialogContentText id="alert-dialog-slide-description">
-                        lorem ipsum dolorem sit amet lorem ipsum dolorem 
-                        sit amet lorem ipsum dolorem sit amet
-                         lorem ipsum dolorem sit amet lorem ipsum dolorem sit amet  
+                        {getText("contact_dialog_description", language.id)}
                     </DialogContentText>
     
                     <Stack container spacing={2} sx={{marginTop:5}}>
-                        <TextField label="Name" required value={formData.name} onChange={handleChangeName}/>
-                        <TextField label="Email address" required value={formData.email} onChange={handleChangeEmail}/>
-                        <TextField label="Nationality" required value={formData.nationality} onChange={handleChangeNationality}/>
+                        <TextField label={getText("contact_field_name", language.id)} required value={formData.name} onChange={handleChangeName}/>
+                        <TextField label={getText("contact_field_email", language.id)} required value={formData.email} onChange={handleChangeEmail}/>
+                        <TextField label={getText("contact_field_nationality", language.id)} required value={formData.nationality} onChange={handleChangeNationality}/>
+                        <TextField label={getText("contact_field_organisation", language.id)} value={formData.organisation} onChange={handleChangeOrganisation}/>
                         
                         <Stack>
-                            <TextField label="Your message" required multiline minRows={5} 
+                            <TextField label={getText("contact_field_message", language.id)} required multiline minRows={5} 
                                         onChange={handleChangeMessage} value={formData.message}
                             />
                             <Typography fontSize="small" color="gray" align='right' sx={{marginRight:1}}>
@@ -137,7 +162,7 @@ const Contacts = () => {
                             </Typography>
                         </Stack>
     
-                        <Button onClick={handleSend} fullWidth size="large" variant='contained'>Send</Button>
+                        <Button onClick={handleSend} fullWidth size="large" variant='contained'>{getText("contact_send_button", language.id)}</Button>
                     </Stack>
     
                 </DialogContent>
@@ -145,7 +170,7 @@ const Contacts = () => {
             </Dialog>            
           
         
-          <Snackbar
+          {/* <Snackbar
             open={sent}
             autoHideDuration={3000}
             onClose={handleCloseSnack}
@@ -161,7 +186,7 @@ const Contacts = () => {
                 >
                     Your message has been sent succesfully
                 </Alert>
-            </Snackbar>
+            </Snackbar> */}
        
         
     </>

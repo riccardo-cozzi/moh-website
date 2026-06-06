@@ -14,6 +14,7 @@ import RecyclingIcon from '@mui/icons-material/Recycling';
 
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText } from '../multilang/Texts';
+import { gradientIconSx } from '../styles';
 
 
 const InfoBoxesPanel = () => {
@@ -27,9 +28,9 @@ const InfoBoxesPanel = () => {
 
 
     const info = [
-        {icon: <HandshakeIcon style={{fontSize: "10rem"}}/>, text: getText("infobox_1", language.id)},
-        {icon: <PublicIcon style={{fontSize: "10rem"}}/>, text: getText("infobox_2", language.id)},
-        {icon: <RecyclingIcon style={{fontSize: "10rem"}}/>,text: getText("infobox_3", language.id)},
+        {icon: <HandshakeIcon sx={{fontSize: "10rem", ...gradientIconSx}}/>, text: getText("infobox_1", language.id)},
+        {icon: <PublicIcon sx={{fontSize: "10rem", ...gradientIconSx}}/>, text: getText("infobox_2", language.id)},
+        {icon: <RecyclingIcon sx={{fontSize: "10rem", ...gradientIconSx}}/>,text: getText("infobox_3", language.id)},
     ]
 
     return <Grid container spacing={2} direction={"row"}>

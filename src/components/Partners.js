@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { 
     Box,
-        Grid, 
-    Typography,
-    Stack
+    Grid, 
 } from '@mui/material';
 
-import { styled } from '@mui/material/styles';
-import {partnerImages} from './PartnersImages';
+import {partnerInfo} from './PartnersInfo';
 
 
 const Partners = () => {
-
 
     return <Box marginBottom={30}>
             <Grid
@@ -25,7 +21,7 @@ const Partners = () => {
                 }}
                 >
                 {
-                    Object.values(partnerImages).map((image, index) => {
+                    Object.values(partnerInfo).map((image, index) => {
                         return  <Grid item lg={1} xs={3} key={index} >
                                     <PartnerBox src={image.src} href={image.url} alt={image.alt}/>
                                 </Grid>
@@ -57,8 +53,6 @@ const PartnerBox = ({src, href, alt}) => {
         ...imageBox, 
         boxShadow:"4px 3px 5px 3px #ddd",
         border:"1px solid #eee",
-
-
     }
 
     return  <Box onClick={handleOpenPage} align={"center"} alignContent={"center"}>

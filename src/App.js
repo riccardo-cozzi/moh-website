@@ -1,11 +1,14 @@
 import './App.css';
 
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import config from './config.json';
 import { LanguageContext } from './multilang/LanguageContext';
 import { Languages } from './multilang/Languages';
 import { FloatingLanguageSelector } from './components/LanguageSelectors';
 import HomePage from './pages/HomePage';
-import { WorkinProgress } from './pages/WorkInProgress';
+import { DownloadPage } from './pages/DownloadPage';
+import { GradientSvgDef } from './styles';
 
 function App() {
   console.log("language stored: ", sessionStorage.getItem("language_id") ? "set to " + sessionStorage.getItem("language_id") : "not set")
@@ -17,17 +20,20 @@ function App() {
       sessionStorage.setItem("language_id", Languages.ENG)
     }
   }, [currentLanguage])
-  
+
   return (
-    
-    <>
-    <LanguageContext.Provider value={[currentLanguage, setCurrentLanguage]}>
-        <HomePage />
-        <FloatingLanguageSelector />
-        {/* -------------- ciao Ric del futuro -> DECOMMENTA QUESTO PER PASSARE ALLA PAGINA DA CUI LINKARE I FILE DI MERDA ------------------- */}
-        {/* <WorkinProgress /> */}
-    </LanguageContext.Provider>
-    </>
+    <BrowserRouter>
+      <GradientSvgDef />
+      <Routes>
+        <Route path="/download" element={<DownloadPage />} />
+        <Route path="/*" element={
+          <LanguageContext.Provider value={[currentLanguage, setCurrentLanguage]}>
+            <HomePage />
+            <FloatingLanguageSelector />
+          </LanguageContext.Provider>
+        } />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

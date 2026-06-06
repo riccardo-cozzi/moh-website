@@ -1,0 +1,15 @@
+{
+  "contactEmail": "moh.organisation@gmail.com",
+  "stories": [
+    { "id": 1, "image": "cleanup.jpg" },
+    { "id": 2, "image": "erasmus.jpg" },
+    { "id": 3, "image": "people.png" },
+    { "id": 4, "image": "workers.jpg" }
+  ],
+  "downloads": [
+    { "file": "MOH child policy firmato.pdf", "label": "MOH Child Policy (signed)" },
+    { "file": "MOH child policy.pdf", "label": "MOH Child Policy" },
+    { "file": "drama_report_first_step_to_europe.pdf.zip", "label": "Drama Report – First Step to Europe" },
+    { "file": "starachowice_report_first_step_to_europe.pdf.zip", "label": "Starachowice Report – First Step to Europe" }
+  ]
+}
