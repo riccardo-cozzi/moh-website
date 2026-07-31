@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import config from '../config.json';
 import { LanguageContext } from '../multilang/LanguageContext';
-import { getText } from '../multilang/Texts';
+import { getText, TEXT_KEYS } from '../multilang/Texts';
 import { GRADIENT, gradientButtonSx, gradientTitle } from '../styles';
 import { 
     Box,
@@ -120,7 +120,7 @@ const Contacts = () => {
             <Stack style={contactBoxStyle}>
                 <MailOutlineIcon style={{ width: "32px", height: "32px", color: "rgba(255,255,255,0.85)" }} />
                 <Typography variant='h5' sx={{ fontFamily: 'Neogen', color: 'white' }}>
-                    {getText("contact_card_title", language.id)}
+                    {getText(TEXT_KEYS.CONTACT_CARD_TITLE, language.id)}
                 </Typography>
             </Stack>
         </Paper>
@@ -133,7 +133,7 @@ const Contacts = () => {
             >
                 <DialogTitle>
                     <Stack direction={"row"} justifyContent="space-between" alignItems="center">
-                        <Typography fontSize={30} sx={gradientTitle}>{getText("contact_card_title", language.id)}</Typography>
+                        <Typography fontSize={30} sx={gradientTitle}>{getText(TEXT_KEYS.CONTACT_CARD_TITLE, language.id)}</Typography>
                         <Typography color="gray">
                             <CloseIcon sx={{cursor:"pointer"}} onClick={handleClose}/>
                         </Typography>
@@ -144,17 +144,17 @@ const Contacts = () => {
                 <DialogContent>
                    
                     <DialogContentText id="alert-dialog-slide-description">
-                        {getText("contact_dialog_description", language.id)}
+                        {getText(TEXT_KEYS.CONTACT_DIALOG_DESCRIPTION, language.id)}
                     </DialogContentText>
     
                     <Stack container spacing={2} sx={{marginTop:5}}>
-                        <TextField label={getText("contact_field_name", language.id)} required value={formData.name} onChange={handleChangeName}/>
-                        <TextField label={getText("contact_field_email", language.id)} required value={formData.email} onChange={handleChangeEmail}/>
-                        <TextField label={getText("contact_field_nationality", language.id)} required value={formData.nationality} onChange={handleChangeNationality}/>
-                        <TextField label={getText("contact_field_organisation", language.id)} value={formData.organisation} onChange={handleChangeOrganisation}/>
+                        <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_NAME, language.id)} required value={formData.name} onChange={handleChangeName}/>
+                        <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_EMAIL, language.id)} required value={formData.email} onChange={handleChangeEmail}/>
+                        <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_NATIONALITY, language.id)} required value={formData.nationality} onChange={handleChangeNationality}/>
+                        <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_ORGANISATION, language.id)} value={formData.organisation} onChange={handleChangeOrganisation}/>
                         
                         <Stack>
-                            <TextField label={getText("contact_field_message", language.id)} required multiline minRows={5} 
+                            <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_MESSAGE, language.id)} required multiline minRows={5} 
                                         onChange={handleChangeMessage} value={formData.message}
                             />
                             <Typography fontSize="small" color="gray" align='right' sx={{marginRight:1}}>
@@ -169,7 +169,7 @@ const Contacts = () => {
                             variant='contained'
                             sx={gradientButtonSx}
                         >
-                            {getText("contact_send_button", language.id)}
+                            {getText(TEXT_KEYS.CONTACT_SEND_BUTTON, language.id)}
                         </Button>
 
                         

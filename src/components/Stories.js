@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Paper, Slide } from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
 import { LanguageContext } from '../multilang/LanguageContext';
-import { getText } from '../multilang/Texts';
+import { getText, TEXT_KEYS } from '../multilang/Texts';
 import config from '../config.json';
 import { gradientTitle } from '../styles';
 
@@ -198,7 +198,7 @@ const StoryDialog = ({ story, onClose, ...props }) => {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>{getText("story_close_button", language.id)}</Button>
+          <Button onClick={handleClose}>{getText(TEXT_KEYS.STORY_CLOSE_BUTTON, language.id)}</Button>
         </DialogActions>
       </Dialog>
       :

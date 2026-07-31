@@ -14,7 +14,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import RecyclingIcon from '@mui/icons-material/Recycling';
 
 import { LanguageContext } from '../multilang/LanguageContext';
-import { getText } from '../multilang/Texts';
+import { getText, TEXT_KEYS } from '../multilang/Texts';
 import { gradientIconSx } from '../styles';
 
 
@@ -29,20 +29,20 @@ const AboutSection = () => {
 
 
     const info = [
-        { icon: <PublicIcon sx={{ fontSize: "10rem", ...gradientIconSx }} />, title: getText("mobility_info_title", language.id), text: getText("mobility_info_text", language.id) },
-        { icon: <RecyclingIcon sx={{ fontSize: "10rem", ...gradientIconSx }} />, title: getText("sustainability_info_title", language.id), text: getText("sustainability_info_text", language.id) },
-        { icon: <HandshakeIcon sx={{ fontSize: "10rem", ...gradientIconSx }} />, title: getText("inclusion_info_title", language.id), text: getText("inclusion_info_text", language.id) },
+        { icon: <PublicIcon sx={{ fontSize: "10rem", ...gradientIconSx }} />, title: getText(TEXT_KEYS.MOBILITY_INFO_TITLE, language.id), text: getText(TEXT_KEYS.MOBILITY_INFO_TEXT, language.id) },
+        { icon: <RecyclingIcon sx={{ fontSize: "10rem", ...gradientIconSx }} />, title: getText(TEXT_KEYS.SUSTAINABILITY_INFO_TITLE, language.id), text: getText(TEXT_KEYS.SUSTAINABILITY_INFO_TEXT, language.id) },
+        { icon: <HandshakeIcon sx={{ fontSize: "10rem", ...gradientIconSx }} />, title: getText(TEXT_KEYS.INCLUSION_INFO_TITLE, language.id), text: getText(TEXT_KEYS.INCLUSION_INFO_TEXT, language.id) },
     ]
     return <Stack direction="column" justifyContent="center" alignItems="center" spacing={5} sx={{ px: { xs: 2, sm: 6, md: 10 }, py: 10 }}>
 
         {/* About Us Title */}
         <Typography variant="h3" align='center' sx={{ fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>
-            {getText("about_us_title", language.id)}
+            {getText(TEXT_KEYS.ABOUT_US_TITLE, language.id)}
         </Typography>
 
         {/* About Us Content */}
         <Typography variant="h4" align='center' color="gray" margin={10}>
-            {getText("about_us_content", language.id)}
+            {getText(TEXT_KEYS.ABOUT_US_CONTENT, language.id)}
         </Typography>
 
         {/* Info Boxes */}

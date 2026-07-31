@@ -3,7 +3,7 @@ import { Box, Dialog, DialogContent, DialogTitle, Divider, IconButton, Stack, Ty
 import CloseIcon from '@mui/icons-material/Close';
 import { partnerInfo } from './PartnersInfo';
 import { LanguageContext } from '../multilang/LanguageContext';
-import { getText } from '../multilang/Texts';
+import { getText, TEXT_KEYS } from '../multilang/Texts';
 
 const Partners = () => {
     const partners = Object.values(partnerInfo);
@@ -35,7 +35,7 @@ export const PartnerListDialog = ({ open, onClose }) => {
 
     return <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm" PaperProps={{ sx: { borderRadius: { xs: 2, sm: 4 }, overflow: 'hidden' } }}>
         <DialogTitle sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: { xs: 3, sm: 4 } }}>
-            <Typography variant="h5" sx={{ fontFamily: 'Neogen', color: '#147f89' }}>{getText("our_partnerships_title", language.id)}</Typography>
+            <Typography variant="h5" sx={{ fontFamily: 'Neogen', color: '#147f89' }}>{getText(TEXT_KEYS.OUR_PARTNERSHIPS_TITLE, language.id)}</Typography>
             <IconButton onClick={onClose} aria-label="Chiudi"><CloseIcon /></IconButton>
         </DialogTitle>
         <Divider />
