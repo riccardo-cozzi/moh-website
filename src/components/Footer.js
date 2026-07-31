@@ -7,10 +7,12 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import { IconButton, Stack } from '@mui/material';
 import Contacts from './Contacts';
 import config from '../config.json';
-import { Link as RouterLink } from 'react-router-dom';
+import { useState } from 'react';
+import { DownloadDialog } from '../pages/DownloadDialog';
 
 
 const Footer = () => {
+    const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
     return (
         <footer style={{
             paddingTop: '200px',
@@ -32,8 +34,7 @@ const Footer = () => {
                     <XIcon fontSize="large" sx={{ color: '#000' }} />
                 </a>
                 <IconButton
-                    component={RouterLink}
-                    to="/download"
+                    onClick={() => setDownloadDialogOpen(true)}
                     aria-label="Download"
                     sx={{
                     color: 'black',
@@ -44,6 +45,11 @@ const Footer = () => {
                     <CloudDownloadIcon />
                 </IconButton>
             </Stack>
+
+            <DownloadDialog
+                open={downloadDialogOpen}
+                onClose={() => setDownloadDialogOpen(false)}
+            />
 
         </footer>
     );

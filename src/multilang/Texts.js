@@ -26,6 +26,11 @@ const texts = {
         "ENG": "Our partnerships",
         "ESP": "Nuestras asociaciones"
     },
+    "show_all_partners": {
+        "ITA": "Mostra tutti",
+        "ENG": "Show all",
+        "ESP": "Mostrar todos"
+    },
 
      // --- ABOUT US ---
     "about_us_content": {

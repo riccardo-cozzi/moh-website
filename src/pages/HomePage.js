@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { Box, Button, Grid, Typography } from '@mui/material';
+import React, { useContext, useState } from 'react';
+import { Box, Grid, Link, Typography } from '@mui/material';
 import Stories from '../components/Stories'
 import Footer from '../components/Footer'
-import Partners from '../components/Partners'
+import Partners, { PartnerListDialog } from '../components/Partners'
 import Contacts from '../components/Contacts'
 import Banner from '../components/Banner';
 import background from '../img/fullbody3.jpg';
@@ -16,6 +16,7 @@ import AboutSection from '../components/AboutSection';
 const HomePage = () => {
 
     const [language,] = useContext(LanguageContext)
+    const [partnersDialogOpen, setPartnersDialogOpen] = useState(false)
 
     return <>
         <Box sx={{
@@ -56,8 +57,12 @@ const HomePage = () => {
                             {/* Partners */}
                             <Grid item sx={{ width: '100%', px: 10 }} >
                                 <Box>
-                                    <Typography variant="h3" align='center' margin={10} sx={{ fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}> {getText("our_partnerships_title", language.id)} </Typography>
+                                    <Typography variant="h3" align='center' margin={10} sx={{ fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>{getText("our_partnerships_title", language.id)}</Typography>
                                     <Partners />
+                                    <Box sx={{ textAlign: 'center', mt: 1, mb: 8 }}>
+                                        <Link component="button" type="button" onClick={() => setPartnersDialogOpen(true)} underline="hover" sx={{ color: '#147f89', fontWeight: 600, cursor: 'pointer' }}>{getText("show_all_partners", language.id)}</Link>
+                                    </Box>
+                                    <PartnerListDialog open={partnersDialogOpen} onClose={() => setPartnersDialogOpen(false)} />
                                 </Box>
                             </Grid>
 
