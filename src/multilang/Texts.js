@@ -1,4 +1,4 @@
-import {Languages} from './Languages';
+import { Languages } from './Languages';
 
 export const getText = (id, lang) => {
     // if (!Languages.all().map(l => l.id).includes(lang)) {
@@ -9,22 +9,63 @@ export const getText = (id, lang) => {
 }
 
 const texts = {
-   
+
+    // --- TITLES
+    "about_us_title": {
+        "ITA": "Chi siamo",
+        "ENG": "About us",
+        "ESP": "Sobre nosotros"
+    },
+    "our_stories_title": {
+        "ITA": "Le nostre storie",
+        "ENG": "Our stories",
+        "ESP": "Nuestras historias"
+    },
+    "our_partnerships_title": {
+        "ITA": "I nostri partner",
+        "ENG": "Our partnerships",
+        "ESP": "Nuestras asociaciones"
+    },
+
+     // --- ABOUT US ---
+    "about_us_content": {
+        "ITA": "Il nome MOH è una parola che unisce due lingue: sanscrito e dialetto Barese. \"Moh!\" è stupore, è meraviglia, è quell'esclamazione spontanea che diciamo quando iniziamo a guardare il mondo da un'altra prospettiva.",
+        "ENG": "The name MOH is a word that unites two languages: Sanskrit and Barese. \"Moh!\" is amazement, it is wonder, it is that spontaneous exclamation we say when we start looking at the world from another perspective.",
+        "ESP": "El nombre MOH es una palabra que une dos idiomas: sánscrito y barese. \"Moh!\" es asombro, es maravilla, es esa exclamación espontánea que decimos cuando empezamos a mirar el mundo desde otra perspectiva."
+    },
+
     // --- INFOBOX ---
-    "infobox_1": {
-        "ITA": "Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. ",
-        "ESP": "Miralo que se avecina A la vuelta de la esquina Viene Diego rumbeando Con la luna en las pupilas Y su traje agua marina Van restos de contrabando",
-        "ENG":  "This is a test text in English. If you change the language selector this text will be translated into the language of your choice."
+    "mobility_info_title": {
+        "ITA": "Mobilità giovanile ed educazione non formale",
+        "ENG": "Youth mobility and non-formal education",
+        "ESP": "Movilidad juvenil y educación no formal"
     },
-    "infobox_2": {
-        "ITA": "Questo è un testo di prova. Rosanna mettici tu qualcosa qui, io scrivo il codice, non il testo, il capo sei tu. Bacioni. ",
-        "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. ",
-        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses. "
+    "sustainability_info_title": {
+        "ITA": "Sostenibilità e tutela dell'ambiente",
+        "ENG": "Sustainability and environmental protection",
+        "ESP": "Sostenibilidad y protección del medio ambiente"
     },
-    "infobox_3": {
-        "ITA": "Questo è un testo in italiano di prova. Se cambi il selettore della lingua questo testo verrà tradotto nella lingua a tua scelta.",
-        "ESP": "Este es un texto de prueba. Rosanna tú pones algo aquí, yo escribo el código, no el texto, tú eres la jefa. Besotes. ",
-        "ENG":  "This is a test text. Rosanna you put something here, I write the code, not the text, you are the boss. Big kisses."
+    
+    "mobility_info_text": {
+        "ITA": "Accompagniamo giovani e youth worker nello sviluppo di competenze personali e professionali, favorendo il dialogo interculturale, la partecipazione e la cittadinanza europea.",
+        "ESP": "Acompañamos a jóvenes y trabajadores juveniles en el desarrollo de competencias personales y profesionales, fomentando el diálogo intercultural, la participación y la ciudadanía europea.",
+        "ENG": "We support young people and youth workers in developing personal and professional skills, fostering intercultural dialogue, participation and European citizenship."
+    },
+    "sustainability_info_text": {
+        "ITA": "Promuoviamo una cultura della sostenibilità attraverso percorsi educativi dedicati al cambiamento climatico, alla biodiversità, agli stili di vita sostenibili e alla cittadinanza ecologica.",
+        "ESP": "Promovemos una cultura de sostenibilidad a través de programas educativos dedicados al cambio climático, la biodiversidad, los estilos de vida sostenibles y la ciudadanía ecológica.",
+        "ENG": "We promote a culture of sustainability through educational programs dedicated to climate change, biodiversity, sustainable lifestyles and ecological citizenship."
+    },
+
+    "inclusion_info_title": {
+        "ITA": "Inclusione, diritti umani e partecipazione",
+        "ENG": "Inclusion, human rights and participation",
+        "ESP": "Inclusión, derechos humanos y participación"
+    },
+    "inclusion_info_text": {
+        "ITA": "Promuoviamo la diversità, il dialogo interculturale e la partecipazione, creando spazi inclusivi in cui ogni giovane possa sentirsi accolto e valorizzato, indipendentemente dal proprio background sociale, culturale o economico.",
+        "ESP": "Promovemos la diversidad, el diálogo intercultural y la participación, creando espacios inclusivos en los que cada joven pueda sentirse acogido y valorado, independientemente de su origen social, cultural o económico.",
+        "ENG": "We promote diversity, intercultural dialogue and participation, creating inclusive spaces where every young person can feel welcomed and valued, regardless of their social, cultural or economic background."
     },
 
     // --- CONTACTS ---

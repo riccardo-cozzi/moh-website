@@ -127,9 +127,7 @@ const StoryDialog = ({ story, onClose, ...props }) => {
   const [language,] = useContext(LanguageContext)
   const [storyHtml, setStoryHtml] = useState('')
   const imageUrl = story ? `${process.env.PUBLIC_URL}/img/storiesImages/${story.image}`: null
-  console.log("image url: ", imageUrl)
-  console.log("Showing story card:", story, "with lang", language)
-
+  
   useEffect(() => {
     if (!story) return
     fetch(`${process.env.PUBLIC_URL}/stories/story_${story.id}/${language.id}.html`)
@@ -148,8 +146,6 @@ const StoryDialog = ({ story, onClose, ...props }) => {
   const handleClose = () => {
     onClose()
   };
-
-  console.log("story html: ", storyHtml)
 
   return (
     open ?

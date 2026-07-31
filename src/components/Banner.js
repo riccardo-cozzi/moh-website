@@ -60,7 +60,7 @@ const Banner = () => {
                                 // alignItems: 'center',
                                 // display:"flex"
                             }}>
-                                <Typography variant="h1" fontSize={40} align='center' sx={{ ...gradientTitle, width: '100%' }}>
+                                <Typography variant="h2" align='center' sx={{ ...gradientTitle, width: '100%' }}>
                                     Mobility Opportunities <br/> Happening
                                     {/* Website in construction */}
                                 </Typography>                    
