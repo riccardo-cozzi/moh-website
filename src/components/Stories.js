@@ -1,9 +1,10 @@
 import { forwardRef, useContext, useEffect, useState } from 'react';
-import { Button, Stack } from '@mui/material';
+import { Button, IconButton, Stack } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Paper, Slide } from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
+import CloseIcon from '@mui/icons-material/Close';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText, TEXT_KEYS } from '../multilang/Texts';
 import config from '../config.json';
@@ -156,7 +157,14 @@ const StoryDialog = ({ story, onClose, ...props }) => {
         onClose={handleClose}
         PaperProps={{ sx: { height: 750, width: 600, overflow: 'hidden', borderRadius: 5 } }}
       >
-        <DialogTitle sx={gradientTitle}>{story.title[language.id]}</DialogTitle>
+        <DialogTitle sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 2 }}>
+          <Typography component="span" sx={gradientTitle}>
+            {story.title[language.id]}
+          </Typography>
+          <IconButton onClick={handleClose} aria-label="Chiudi" size="small">
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
 
         <DialogContent>
           <Grid container spacing={0}>
@@ -166,7 +174,15 @@ const StoryDialog = ({ story, onClose, ...props }) => {
                 <img
                   src={imageUrl}
                   alt={story.title[language.id]}
-                  style={{ maxHeight: 350, width: "100%", borderRadius: 5, cursor: 'pointer' }}
+                  style={{
+                    display: 'block',
+                    maxHeight: 350,
+                    width: "100%",
+                    borderRadius: 20,
+                    cursor: 'pointer',
+                    // WebkitMaskImage: 'linear-gradient(to bottom, black 48%, transparent 100%)',
+                    // maskImage: 'linear-gradient(to bottom, black 48%, transparent 100%)',
+                  }}
                 />
               </a>
             </Grid>
