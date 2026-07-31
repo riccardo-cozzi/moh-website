@@ -30,7 +30,7 @@ const Banner = () => {
 
     return <>
         {
-            isMobile ? <SmartphoneIcon /> : <LaptopIcon /> 
+            isMobile ? <SmartphoneIcon style={{opacity:0.1}} /> : <LaptopIcon style={{opacity:0.1}} /> 
         }
         <Box sx={{
             borderRadius: 0, 
@@ -38,7 +38,7 @@ const Banner = () => {
             // alignItems: "right", 
             display: "flex", 
             height: "80vh",
-            paddingTop:10, 
+            paddingTop:7, 
         }}
             >
             {
@@ -61,8 +61,8 @@ const Banner = () => {
                                 // display:"flex"
                             }}>
                                 <Typography variant="h1" fontSize={40} align='center' sx={{ ...gradientTitle, width: '100%' }}>
-                                    {/* Mobility Opportunities <br/> Happening */}
-                                    Website in construction
+                                    Mobility Opportunities <br/> Happening
+                                    {/* Website in construction */}
                                 </Typography>                    
                         </Grid>
                     </Grid>
@@ -77,8 +77,8 @@ const Banner = () => {
                                 display:"flex"
                             }}>
                                 <Typography variant="h1" fontSize={100} sx={gradientTitle}>
-                                    {/* Mobility <br/> Opportunities <br/> Happening */}
-                                    Website in construction
+                                    Mobility <br/> Opportunities <br/> Happening
+                                    {/* Website in construction */}
                                 </Typography>                    
                         </Grid>
 

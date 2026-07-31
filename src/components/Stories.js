@@ -79,7 +79,7 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
     paddingTop: 50,
     paddingBottom: 0,
     paddingLeft: 50,
-    height: 300,
+    height: 200,
     cursor: "pointer",
   }
 

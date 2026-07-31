@@ -11,12 +11,10 @@ import { DownloadPage } from './pages/DownloadPage';
 import { GradientSvgDef } from './styles';
 
 function App() {
-  console.log("language stored: ", sessionStorage.getItem("language_id") ? "set to " + sessionStorage.getItem("language_id") : "not set")
   const [currentLanguage, setCurrentLanguage] = useState(Languages.ENG)
 
   useEffect(() => {
     if (!currentLanguage) {
-      console.log("Setting new language in local storage: ", currentLanguage)
       sessionStorage.setItem("language_id", Languages.ENG)
     }
   }, [currentLanguage])

@@ -14,9 +14,9 @@
         "ESP": "Storytelling para la Resiliencia y el Cambio Social"
       },
       "location": {
-        "ITA": "Giovinazzo, Italia",
-        "ENG": "Giovinazzo, Italy",
-        "ESP": "Giovinazzo, Italia"
+        "ITA": "Giovinazzo, Italia, Novembre 2025",
+        "ENG": "Giovinazzo, Italy, November 2025",
+        "ESP": "Giovinazzo, Italia, Noviembre de 2025"
       }
     },
     "story_2": {
@@ -50,9 +50,9 @@
         "ESP": "Estrategias Juveniles contra la Contaminación por Plástico"
       },
       "location": {
-        "ITA": "",
-        "ENG": "",
-        "ESP": ""
+        "ITA": "Giovinazzo, Italia, Settembre 2022",
+        "ENG": "Giovinazzo, Italy, September 2022",
+        "ESP": "Giovinazzo, Italia, Septiembre de 2022"
       }
     },
     "story_4": {
@@ -77,7 +77,7 @@
       "image": "workers.jpg",
       "title": {
         "ITA": "Under my Skin",
-        "ENG": "TUnder my Skin",
+        "ENG": "Under my Skin",
         "ESP": "Under my Skin"
       },
       "subtitle": {
