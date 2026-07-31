@@ -2,7 +2,10 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 import TranslateIcon from '@mui/icons-material/Translate';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { Languages } from '../multilang/Languages';
 
@@ -35,7 +38,19 @@ export const FloatingLanguageSelector = () => {
 }
 
   return (
-    <Box style={FABStyle} sx={{transform: 'translateZ(0px)', flexGrow: 1 }}>
+    <>
+      <Box
+        sx={{
+          position: 'fixed',
+          top: 20,
+          right: 88,
+          zIndex: 1200,
+        }}
+      >
+        
+      </Box>
+
+      <Box style={FABStyle} sx={{transform: 'translateZ(0px)', flexGrow: 1 }}>
       <SpeedDial
         ariaLabel="SpeedDial basic example"
         icon={<TranslateIcon />}
@@ -65,6 +80,7 @@ export const FloatingLanguageSelector = () => {
             )})
         }
       </SpeedDial>
-    </Box>
+      </Box>
+    </>
   );
 }

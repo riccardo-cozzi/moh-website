@@ -3,9 +3,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YoutubeIcon from '@mui/icons-material/YouTube';
 import XIcon from '@mui/icons-material/X';
-import { Stack } from '@mui/material';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import { IconButton, Stack } from '@mui/material';
 import Contacts from './Contacts';
 import config from '../config.json';
+import { Link as RouterLink } from 'react-router-dom';
+
 
 const Footer = () => {
     return (
@@ -28,6 +31,18 @@ const Footer = () => {
                 <a href={config.socialLinks.x} target="_blank" rel="noopener noreferrer">
                     <XIcon fontSize="large" sx={{ color: '#000' }} />
                 </a>
+                <IconButton
+                    component={RouterLink}
+                    to="/download"
+                    aria-label="Download"
+                    sx={{
+                    color: 'black',
+                    background: 'white',
+                    ':hover': { background: '#ddd' },
+                    }}
+                >
+                    <CloudDownloadIcon />
+                </IconButton>
             </Stack>
 
         </footer>
