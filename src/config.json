@@ -1,5 +1,5 @@
 {
-  "contactEmail": "moh.organisation@gmail.com",
+  
   "stories": {
     "story_1": {
       "image": "cleanup.jpg",
@@ -127,5 +127,13 @@
       "file": "starachowice_report_first_step_to_europe.pdf.zip",
       "label": "Starachowice Report – First Step to Europe"
     }
-  ]
+  ],
+
+  "contactEmail": "moh.organisation@gmail.com",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/moh_ngo/",
+    "facebook": "https://www.facebook.com/wearemoh",
+    "youtube": "https://www.youtube.com/channel/UCetgwIJ58UBTWKiZUNe9Ecw",
+    "x": "https://x.com/MOH43632710"
+  }
 }

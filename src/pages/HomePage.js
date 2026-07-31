@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Grid,Typography } from '@mui/material';
 import InfoBoxes from '../components/InfoBox'
 import Stories from '../components/Stories'
+import Footer from '../components/Footer'
 import Partners from '../components/Partners'
 import Contacts from '../components/Contacts'
 import Banner from '../components/Banner';
@@ -56,13 +57,14 @@ const HomePage = () => {
                                 </Box> 
                             </Grid>
 
-                            {/* Contacts */}
-                            <Grid item sx={{ width: '100%' }}> <Contacts /> </Grid>
+                            <Footer />
                         </Grid>
                     </Grid>
                 </Grid>
+                
             </Box>
         </Box>
+        
     </>
  
 }

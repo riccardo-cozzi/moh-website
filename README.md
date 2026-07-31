@@ -111,6 +111,22 @@ Per rimuovere una storia: rimuovi la riga da `stories` in `src/config.json` e ca
 Per rimuovere un file: elimina il file da `public/files/` e rimuovi la riga corrispondente da `src/config.json`.
 
 
+## Modificare i link social del footer
+
+I link ai profili social visualizzati nel footer si trovano nella sezione `socialLinks` di `src/config.json`:
+
+```json
+"socialLinks": {
+   "instagram": "https://www.instagram.com/nuovo-profilo/",
+   "facebook": "https://www.facebook.com/nuova-pagina",
+   "youtube": "https://www.youtube.com/@nuovo-canale",
+   "x": "https://x.com/nuovo-profilo"
+}
+```
+
+Modifica il valore del link del social desiderato senza cambiare le chiavi (`instagram`, `facebook`, `youtube`, `x`). Il componente `Footer` legge automaticamente questi valori dalla configurazione. Dopo la modifica, avvia l'app per verificarla e deploya con `npm run deploy`.
+
+
 ## Running the app
 ```
 npm start

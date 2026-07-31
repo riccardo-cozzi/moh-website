@@ -11,11 +11,13 @@ import {
     Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, 
     TextField,
     Snackbar,Alert,
-    Paper
+    Paper,
+    Icon
 } from '@mui/material';
 
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import CloseIcon from '@mui/icons-material/Close';
+
 
 const contactBoxStyle = {
     justifyContent: "center", 
@@ -120,10 +122,8 @@ const Contacts = () => {
                 <Typography variant='h5' sx={{ fontFamily: 'Neogen', color: 'white' }}>
                     {getText("contact_card_title", language.id)}
                 </Typography>
-               
             </Stack>
         </Paper>
-
         
         <Dialog
               open={dialogOpen}
@@ -161,7 +161,7 @@ const Contacts = () => {
                                 {charCount}/{maxChar}
                             </Typography>
                         </Stack>
-    
+
                         <Button
                             onClick={handleSend}
                             fullWidth
@@ -171,6 +171,8 @@ const Contacts = () => {
                         >
                             {getText("contact_send_button", language.id)}
                         </Button>
+
+                        
                     </Stack>
     
                 </DialogContent>
