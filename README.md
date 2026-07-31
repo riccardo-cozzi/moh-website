@@ -84,19 +84,18 @@ Per rimuovere una storia: rimuovi la riga da `stories` in `src/config.json` e ca
 
 ## Aggiungere un partner alla sezione "Partners"
 
-1. Copia l'immagine in `src/img/partner/`
-2. Importare il file immagine in `PartnerInfo.js`:
-   ```javascript
-   import XXX from '../img/partner/XXX.png';
-   ```
-3. Aggiungi una riga nell'oggetto `partnerInfo` in `PartnerInfo.js`:
-   ```javascript
-   XXX: {
-       src: XXX,
-       alt: "Nome completo del partner",
-       url: "https://link-al-sito-del-partner.com"
+1. Copia l'immagine in `public/img/partner/`
+2. Aggiungi una riga all'array `partners` in `src/config.json`:
+   ```json
+   {
+     "image": "logo-partner.png",
+     "name": "Nome completo del partner",
+     "url": "https://link-al-sito-del-partner.com"
    }
    ```
+3. Usa come `image` esattamente il nome del file presente in `public/img/partner/`.
+
+Per un partner senza sito, lascia `url` vuoto (`"url": ""`). Per rimuoverlo, elimina la riga da `partners` e, se non utilizzata altrove, elimina anche l'immagine.
 
 
 ## Aggiornare i file scaricabili dalla pagina `/download`

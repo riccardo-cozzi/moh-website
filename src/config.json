@@ -1,5 +1,4 @@
 {
-  
   "stories": {
     "story_1": {
       "image": "untie-knot.png",
@@ -126,18 +125,284 @@
     {
       "file": "starachowice_report_first_step_to_europe.pdf.zip",
       "label": "Starachowice Report – First Step to Europe"
-    }, 
+    },
     {
       "file": "Untie the KNot Stories to unravel, stories to change.pdf",
       "label": "Untie the Knot – Stories to unravel, stories to change"
     }
   ],
-
   "contactEmail": "moh.organisation@gmail.com",
   "socialLinks": {
     "instagram": "https://www.instagram.com/moh_ngo/",
     "facebook": "https://www.facebook.com/wearemoh",
     "youtube": "https://www.youtube.com/channel/UCetgwIJ58UBTWKiZUNe9Ecw",
     "x": "https://x.com/MOH43632710"
-  }
+  },
+  "partners": [
+    {
+      "image": "arterra.png",
+      "name": "Arterra Bizimodu",
+      "url": "https://arterrabizimodu.org"
+    },
+    {
+      "image": "backtotheroots.jpg",
+      "name": "Back to the Roots",
+      "url": "https://backtotheroots.net/en/"
+    },
+    {
+      "image": "biodiversa.jpeg",
+      "name": "Biodiversa",
+      "url": "https://biodiversaenlinea.org/"
+    },
+    {
+      "image": "caos.webp",
+      "name": "Caos",
+      "url": "https://caospuglia.org/chi-siamo/"
+    },
+    {
+      "image": "cleanupitalia.jpg",
+      "name": "Cleanup Italia",
+      "url": ""
+    },
+    {
+      "image": "coconut.jpg",
+      "name": "Coconut",
+      "url": "https://coconutwork.org/"
+    },
+    {
+      "image": "coconutwork.jpg",
+      "name": "Coconut Work",
+      "url": "https://coconutwork.org/"
+    },
+    {
+      "image": "copenhagenyouthnetwork.jpg",
+      "name": "Copenhagen Youth Network",
+      "url": "https://cyn.dk/"
+    },
+    {
+      "image": "decathlon.jpg",
+      "name": "Decathlon",
+      "url": "https://www.decathlon.it/"
+    },
+    {
+      "image": "faro.jpg",
+      "name": "Faro",
+      "url": ""
+    },
+    {
+      "image": "genesis.png",
+      "name": "Neo Genesis",
+      "url": "https://www.ngogenesis.com"
+    },
+    {
+      "image": "geyc.jpg",
+      "name": "Geyc",
+      "url": "https://geyc.ro/"
+    },
+    {
+      "image": "icpi.jpg",
+      "name": "Icpi",
+      "url": "https://www.linkedin.com/company/the-international-center-for-peace-and-integration-icpi/"
+    },
+    {
+      "image": "lara.png",
+      "name": "Lara Cultura",
+      "url": "https://www.facebook.com/LaraCultura.community/"
+    },
+    {
+      "image": "letsdoititaly.png",
+      "name": "Let's Do It Italy",
+      "url": "https://www.letsdoititaly.org/"
+    },
+    {
+      "image": "mihi.png",
+      "name": "Mihi",
+      "url": "https://lv.mihiyouth.org/"
+    },
+    {
+      "image": "mihiegypt.webp",
+      "name": "Mihi Egypt",
+      "url": "https://eg.mihiyouth.org/"
+    },
+    {
+      "image": "natedu.jpg",
+      "name": "Natedu",
+      "url": ""
+    },
+    {
+      "image": "northern.jpeg",
+      "name": "Northern Lights",
+      "url": "https://northernlightsnpo.com/"
+    },
+    {
+      "image": "octopus.jpg",
+      "name": "Octopus",
+      "url": "https://fr.linkedin.com/company/octopus-ntw"
+    },
+    {
+      "image": "ostiacleanup.jpeg",
+      "name": "Ostia Cleanup",
+      "url": "https://ostiacleanup.it/"
+    },
+    {
+      "image": "parley.jpg",
+      "name": "Parley",
+      "url": "https://parley.tv/"
+    },
+    {
+      "image": "peopleestonia.jpg",
+      "name": "Eesti People to People",
+      "url": "https://www.ptpest.ee/"
+    },
+    {
+      "image": "precious.jpg",
+      "name": "Precious Plastic",
+      "url": "https://www.instagram.com/preciousplastic_ventidiscambio/"
+    },
+    {
+      "image": "puliam.jpg",
+      "name": "Puliamo il Mare Brindisi",
+      "url": "https://www.facebook.com/PuliAmoIlMareBrindisi/"
+    },
+    {
+      "image": "quarantine.jpg",
+      "name": "The Quarantine",
+      "url": "https://thequarantine.org/en/festival/"
+    },
+    {
+      "image": "retake.jpg",
+      "name": "Retake",
+      "url": "https://www.retake.org/bari"
+    },
+    {
+      "image": "rivercleanup.png",
+      "name": "Rivercleanup",
+      "url": "https://www.river-cleanup.org/en"
+    },
+    {
+      "image": "naturfreunde.jpg",
+      "name": "Naturfreunde Deutschland",
+      "url": "https://www.naturfreunde.de/gruppe/suche"
+    },
+    {
+      "image": "santasevera.jpg",
+      "name": "Clean Up Santa Severa",
+      "url": "https://www.facebook.com/CleanUpSantaSevera/about"
+    },
+    {
+      "image": "savethesea.jpg",
+      "name": "Save The Seas",
+      "url": "https://www.facebook.com/savetheseas1/"
+    },
+    {
+      "image": "sdgt.png",
+      "name": "Sdgt",
+      "url": "https://csyo-az.org/"
+    },
+    {
+      "image": "surfrider.png",
+      "name": "Surfrider Foundation",
+      "url": "https://www.surfrider.org/"
+    },
+    {
+      "image": "teatro.png",
+      "name": "Teatro Metaphora",
+      "url": "https://teatrometaphora.org/"
+    },
+    {
+      "image": "threeplace.jpg",
+      "name": "Three Place",
+      "url": "https://www.facebook.com/THREE3PLACE"
+    },
+    {
+      "image": "toulouseyouth.jpg",
+      "name": "Toulouse Youth Network",
+      "url": "https://tlseyouthnetwork.com/"
+    },
+    {
+      "image": "trenta.png",
+      "name": "Trenta",
+      "url": ""
+    },
+    {
+      "image": "twohandsmolfetta.jpeg",
+      "name": "Two Hands Molfetta",
+      "url": "https://2handsorganization.com/"
+    },
+    {
+      "image": "ventidiscambio.png",
+      "name": "Ventidiscambio",
+      "url": "https://apsventidiscambio.wordpress.com/"
+    },
+    {
+      "image": "vogliamosantospirito.jpeg",
+      "name": "VogliAmo Santo Spirito Pulita",
+      "url": "https://www.facebook.com/groups/1024765351035213/about"
+    },
+    {
+      "image": "volontariatosnicola.jpg",
+      "name": "Centro di Servizio Volontariato San Nicola",
+      "url": "https://www.csvbari.com/"
+    },
+    {
+      "image": "worldcleanup.jpg",
+      "name": "World Cleanup Day",
+      "url": "https://www.worldcleanupday.org/"
+    },
+    {
+      "image": "worldrise.png",
+      "name": "Worldrise",
+      "url": "https://worldrise.org/"
+    },
+    {
+      "image": "wwf.jpg",
+      "name": "Wwf",
+      "url": "https://www.wwf.it/"
+    },
+    {
+      "image": "xuventude.png",
+      "name": "Xuventude Verde Polo Cambio",
+      "url": "https://www.facebook.com/xuventudeverde/"
+    },
+    {
+      "image": "yee.jpg",
+      "name": "Yee",
+      "url": "https://yeenet.eu/"
+    },
+    {
+      "image": "catfarm.png",
+      "name": "Catfarm",
+      "url": "https://catfarm.net/"
+    },
+    {
+      "image": "reflectionsOnEurope.png",
+      "name": "Reflections On Europe",
+      "url": "https://rozprawyoeuropie.eu"
+    },
+    {
+      "image": "planBe.png",
+      "name": "Plan Be",
+      "url": "https://planbe-ngo.com"
+    },
+    {
+      "image": "freeAndReal.png",
+      "name": "Free And Real",
+      "url": "https://www.freeandreal.org"
+    },
+    {
+      "image": "literaryClubOlovceSvilajnac.png",
+      "name": "Literary Club Olovce Svilajnac",
+      "url": "https://www.facebook.com/kkolovce/"
+    },
+    {
+      "image": "core.png",
+      "name": "Colectiva Regeneratie",
+      "url": "https://coregen.eu"
+    },
+    {
+      "image": "molino.png",
+      "name": "El Molino De Guadalmesi",
+      "url": "https://www.molinodeguadalmesi.com"
+    }
+  ]
 }

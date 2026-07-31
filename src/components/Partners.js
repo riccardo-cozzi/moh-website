@@ -1,12 +1,17 @@
 import React from 'react';
 import { Box, Dialog, DialogContent, DialogTitle, Divider, IconButton, Stack, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import { partnerInfo } from './PartnersInfo';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText, TEXT_KEYS } from '../multilang/Texts';
+import config from '../config.json';
+
+const partners = config.partners.map((partner) => ({
+    ...partner,
+    src: `${process.env.PUBLIC_URL}/img/partner/${partner.image}`,
+    alt: partner.name,
+}));
 
 const Partners = () => {
-    const partners = Object.values(partnerInfo);
     const scrollingPartners = [...partners, ...partners];
 
     return <Box marginBottom={1} sx={{ overflow: 'hidden', width: '100%' }}>
@@ -29,7 +34,7 @@ const capitalizeName = (name) => name.charAt(0).toUpperCase() + name.slice(1);
 
 export const PartnerListDialog = ({ open, onClose }) => {
     const [language] = React.useContext(LanguageContext);
-    const dialogPartners = Object.values(partnerInfo).sort((first, second) => (
+    const dialogPartners = [...partners].sort((first, second) => (
         first.alt.localeCompare(second.alt, undefined, { sensitivity: 'base' })
     ));
 
