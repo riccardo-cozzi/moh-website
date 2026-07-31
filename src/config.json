@@ -4,14 +4,14 @@
     "story_1": {
       "image": "cleanup.jpg",
       "title": {
-        "ITA": "Progetto 1",
-        "ENG": "Project 1",
-        "ESP": "Proyecto 1"
+        "ITA": "Untie the Knot",
+        "ENG": "Untie the Knot",
+        "ESP": "Untie the Knot"
       },
       "subtitle": {
-        "ITA": "Questo è il primo progetto",
-        "ENG": "This is the first project",
-        "ESP": "Este es el primer proyecto"
+        "ITA": "Storytelling per la Resilienza e il Cambiamento Sociale",
+        "ENG": "Storytelling for Resilience and Social Change",
+        "ESP": "Storytelling para la Resiliencia y el Cambio Social"
       },
       "location": {
         "ITA": "Giovinazzo, Italia",
@@ -22,55 +22,91 @@
     "story_2": {
       "image": "erasmus.jpg",
       "title": {
-        "ITA": "Progetto 2",
-        "ENG": "Project 2",
-        "ESP": "Proyecto 2"
+        "ITA": "Ecotopia",
+        "ENG": "Ecotopia",
+        "ESP": "Ecotopia"
       },
       "subtitle": {
-        "ITA": "Questo è il secondo progetto",
-        "ENG": "This is the second project",
-        "ESP": "Este es el segundo proyecto"
+        "ITA": "Sostenibilità ambientale e la cittadinanza attiva",
+        "ENG": "Sustainability and Active Citizenship",
+        "ESP": "Sostenibilidad Ambiental y Ciudadanía Activa"
       },
       "location": {
-        "ITA": "Varna, Bulgaria",
-        "ENG": "Varna, Bulgaria",
-        "ESP": "Varna, Bulgaria"
+        "ITA": "Giovinazzo, Italia, Maggio-Giugno 2024",
+        "ENG": "Giovinazzo, Italy, May-June 2024",
+        "ESP": "Giovinazzo, Italia, Mayo-Junio de 2024"
       }
     },
     "story_3": {
       "image": "people.png",
       "title": {
-        "ITA": "Progetto 3",
-        "ENG": "Project 3",
-        "ESP": "Proyecto 3"
+        "ITA": "What the Plastic",
+        "ENG": "What the Plastic",
+        "ESP": "What the Plastic"
       },
       "subtitle": {
-        "ITA": "Questo è il terzo progetto",
-        "ENG": "This is the third project",
-        "ESP": "Este es el tercer proyecto"
+        "ITA": "Strategie Giovanili contro l'Inquinamento da Plastica",
+        "ENG": "Youth Strategies Against Plastic Pollution",
+        "ESP": "Estrategias Juveniles contra la Contaminación por Plástico"
       },
       "location": {
-        "ITA": "Vælose, Danimarca",
-        "ENG": "Vælose, Denmark",
-        "ESP": "Vælose, Dinamarca"
+        "ITA": "",
+        "ENG": "",
+        "ESP": ""
       }
     },
     "story_4": {
       "image": "workers.jpg",
       "title": {
-        "ITA": "Progetto 4",
-        "ENG": "Project 4",
-        "ESP": "Proyecto 4"
+        "ITA": "CACT4US 2.0",
+        "ENG": "CACT4US 2.0",
+        "ESP": "CACT4US 2.0"
       },
       "subtitle": {
-        "ITA": "Questo è il quarto progetto",
-        "ENG": "This is the fourth project",
-        "ESP": "Este es el quarto proyecto"
+        "ITA": "Change and Act for Climate Together",
+        "ENG": "Change and Act for Climate Together",
+        "ESP": "Cambio y Acción por el Clima Juntos"
       },
       "location": {
-        "ITA": "Tirana, Albania",
-        "ENG": "Tirana, Albania",
-        "ESP": "Tirana, Albania"
+        "ITA": "Giovinazzo, Italia, Ottobre 2021",
+        "ENG": "Giovinazzo, Italy, October 2021",
+        "ESP": "Giovinazzo, Italia, Octubre de 2021"
+      }
+    },
+    "story_5": {
+      "image": "workers.jpg",
+      "title": {
+        "ITA": "Under my Skin",
+        "ENG": "TUnder my Skin",
+        "ESP": "Under my Skin"
+      },
+      "subtitle": {
+        "ITA": "Educazione non formale, benessere e soft skills",
+        "ENG": "Non Formal Education, Wellbeing and Soft Skills",
+        "ESP": "Educación no formal, bienestar y habilidades blandas"
+      },
+      "location": {
+        "ITA": "Giovinazzo, Italia, Ottobre 2021",
+        "ENG": "Giovinazzo, Italy, October 2021",
+        "ESP": "Giovinazzo, Italia, Octubre de 2021"
+      }
+    },
+    "story_6": {
+      "image": "workers.jpg",
+      "title": {
+        "ITA": "Youthwork ReHab",
+        "ENG": "Youthwork ReHab",
+        "ESP": "Youthwork ReHab"
+      },
+      "subtitle": {
+        "ITA": "Educazione non formale e occupabilità",
+        "ENG": "Non Formal Education and Employability",
+        "ESP": "Educación no formal y empleabilidad"
+      },
+      "location": {
+        "ITA": "Giovinazzo, Italia, Ottobre 2021",
+        "ENG": "Giovinazzo, Italy, October 2021",
+        "ESP": "Giovinazzo, Italia, Octubre de 2021"
       }
     }
   },

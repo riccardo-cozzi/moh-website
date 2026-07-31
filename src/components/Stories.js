@@ -24,13 +24,13 @@ const Stories = () => {
   return <>
     <Grid container spacing={5} direction={"row"} sx={{ paddingLeft: 10, paddingRight: 10 }}>
       {
-        Object.values(config.stories).map((story, index) =>
-          <Grid item xs={12} md={6} key={index}>
+        Object.entries(config.stories).map(([storyId, story]) =>
+          <Grid item xs={12} md={6} key={storyId}>
             <StoryCard
               title={story.title[language.id]}
               subtitle={story.subtitle[language.id]}
               location={story.location[language.id]}
-              onOpen={() => handleChangeStory(story)}
+              onOpen={() => handleChangeStory({ ...story, id: storyId.replace('story_', '') })}
               imgurl={story.imgurl}
             />
           </Grid>
@@ -133,7 +133,10 @@ const StoryDialog = ({ story, onClose, ...props }) => {
   useEffect(() => {
     if (!story) return
     fetch(`${process.env.PUBLIC_URL}/stories/story_${story.id}/${language.id}.html`)
-      .then(res => res.text())
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        return res.text()
+      })
       .then(html => setStoryHtml(html))
       .catch(() => setStoryHtml(''))
   }, [story, language])
@@ -145,6 +148,8 @@ const StoryDialog = ({ story, onClose, ...props }) => {
   const handleClose = () => {
     onClose()
   };
+
+  console.log("story html: ", storyHtml)
 
   return (
     open ?
@@ -187,7 +192,6 @@ const StoryDialog = ({ story, onClose, ...props }) => {
           </Grid>
 
           <DialogContentText id="alert-dialog-slide-description" component="div">
-            <br /><br />
             <div dangerouslySetInnerHTML={{ __html: storyHtml }} />
           </DialogContentText>
         </DialogContent>
