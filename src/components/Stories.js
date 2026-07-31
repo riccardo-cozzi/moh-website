@@ -14,18 +14,6 @@ const Stories = () => {
   const [selectedStory, setSelectedStory] = useState(null)
   const [language,] = useContext(LanguageContext)
 
-  const displayedStories = config.stories.map(({ id, image }) => ({
-    title: getText(`story_${id}_title`, language.id),
-    subtitle: getText(`story_${id}_subtitle`, language.id),
-    location: getText(`story_${id}_location`, language.id),
-    imgurl: `${process.env.PUBLIC_URL}/img/storiesImages/${image}`,
-    text: getText(`story_${id}`, language.id),
-  }))
-
-  useEffect(() => {
-    console.log(selectedStory)
-  }, [selectedStory])
-
   const closeDialog = () => {
     setSelectedStory(null)
   }
@@ -33,22 +21,20 @@ const Stories = () => {
   const handleChangeStory = (story) => {
     setSelectedStory(story)
   }
-
   return <>
-
     <Grid container spacing={5} direction={"row"} sx={{ paddingLeft: 10, paddingRight: 10 }}>
       {
-        displayedStories.map((story, index) => {
-          return <Grid item xs={12} md={6} key={index}>
+        Object.values(config.stories).map((story, index) =>
+          <Grid item xs={12} md={6} key={index}>
             <StoryCard
-              title={story.title}
-              subtitle={story.subtitle}
-              location={story.location}
+              title={story.title[language.id]}
+              subtitle={story.subtitle[language.id]}
+              location={story.location[language.id]}
               onOpen={() => handleChangeStory(story)}
               imgurl={story.imgurl}
             />
           </Grid>
-        })
+        )
       }
     </Grid>
 
@@ -73,8 +59,8 @@ const LocationBox = ({ text }) => {
 
 
 const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
-  const isMobile = window.innerWidth < 950
 
+  const isMobile = window.innerWidth < 950
   const [hover, setHover] = useState(false)
 
   const imageBox = {
@@ -137,9 +123,20 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
 
 
 const StoryDialog = ({ story, onClose, ...props }) => {
-
   const open = (story !== null)
   const [language,] = useContext(LanguageContext)
+  const [storyHtml, setStoryHtml] = useState('')
+  const imageUrl = story ? `${process.env.PUBLIC_URL}/img/storiesImages/${story.image}`: null
+  console.log("image url: ", imageUrl)
+  console.log("Showing story card:", story, "with lang", language)
+
+  useEffect(() => {
+    if (!story) return
+    fetch(`${process.env.PUBLIC_URL}/stories/story_${story.id}/${language.id}.html`)
+      .then(res => res.text())
+      .then(html => setStoryHtml(html))
+      .catch(() => setStoryHtml(''))
+  }, [story, language])
 
   const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -148,7 +145,6 @@ const StoryDialog = ({ story, onClose, ...props }) => {
   const handleClose = () => {
     onClose()
   };
-
 
   return (
     open ?
@@ -159,13 +155,13 @@ const StoryDialog = ({ story, onClose, ...props }) => {
         onClose={handleClose}
         PaperProps={{ sx: { height: 750, width: 600, overflow: 'hidden', borderRadius: 5 } }}
       >
-        <DialogTitle sx={gradientTitle}>{story.title}</DialogTitle>
+        <DialogTitle sx={gradientTitle}>{story.title[language.id]}</DialogTitle>
 
         <DialogContent>
           <Grid container spacing={0}>
 
             <Grid item xs={12}>
-              <img src={story.imgurl} style={{ maxHeight: 350, width: "100%", borderRadius: 5 }} />
+              <img src={imageUrl} style={{ maxHeight: 350, width: "100%", borderRadius: 5 }} />
             </Grid>
 
             <Grid item>
@@ -177,7 +173,7 @@ const StoryDialog = ({ story, onClose, ...props }) => {
               }}>
                 <PlaceIcon color="disabled" fontSize="small" />
                 <Typography variant="caption">
-                  {story.location}
+                  {story.location[language.id]}
                 </Typography>
               </div>
             </Grid>
@@ -186,13 +182,13 @@ const StoryDialog = ({ story, onClose, ...props }) => {
           <Grid item xs={12}>
             <br />
             <Typography variant="subtitle1" color="text.secondary" fontStyle="italic">
-              {story.subtitle}
+              {story.subtitle[language.id]}
             </Typography>
           </Grid>
 
-          <DialogContentText id="alert-dialog-slide-description">
+          <DialogContentText id="alert-dialog-slide-description" component="div">
             <br /><br />
-            {story.text}
+            <div dangerouslySetInnerHTML={{ __html: storyHtml }} />
           </DialogContentText>
         </DialogContent>
         <DialogActions>

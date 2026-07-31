@@ -2,7 +2,11 @@
 
 ## Testi multi-lingua
 
-Tutti i testi visibili nel sito si trovano in `src/multilang/Texts.js`.  
+I testi del sito si dividono in due categorie con approcci diversi.
+
+### Testi dell'interfaccia (Texts.js)
+
+I testi di UI (navbar, infobox, form contatti, pulsanti, ecc.) si trovano in `src/multilang/Texts.js`.  
 Le lingue supportate sono **ITA**, **ENG**, **ESP** (definite in `src/multilang/Languages.js`).
 
 Ogni testo è identificato da una chiave e contiene una versione per ogni lingua:
@@ -26,6 +30,40 @@ getText("nome_chiave", language.id)
 2. Usa `getText("nome_chiave", language.id)` nel componente React dove vuoi mostrarlo
 3. Deploya con `npm run deploy`
 
+### Testi delle storie
+
+I testi delle storie **non** si trovano in `Texts.js` ma in file dedicati dentro `public/stories/`.  
+Ogni storia ha la propria cartella con questa struttura:
+
+```
+public/stories/
+└── story_1/
+    ├── details.json   ← titolo, sottotitolo, luogo (nelle 3 lingue)
+    ├── ITA.html       ← corpo della storia in italiano (può contenere HTML formattato)
+    ├── ENG.html
+    └── ESP.html
+```
+
+**`details.json`** contiene i metadati:
+```json
+{
+  "title":    { "ITA": "...", "ENG": "...", "ESP": "..." },
+  "subtitle": { "ITA": "...", "ENG": "...", "ESP": "..." },
+  "location": { "ITA": "...", "ENG": "...", "ESP": "..." }
+}
+```
+
+**`ITA.html` / `ENG.html` / `ESP.html`** contengono il corpo della storia come HTML libero:
+```html
+<h3>Titolo sezione</h3>
+<p>Paragrafo con <strong>grassetto</strong>.</p>
+<ul>
+  <li>Punto elenco</li>
+</ul>
+```
+
+I file HTML vengono caricati dinamicamente dal browser e iniettati nel dialog della storia.
+
 ---
 
 ## Aggiungere una storia alla sezione "Our stories"
@@ -35,16 +73,12 @@ getText("nome_chiave", language.id)
    ```json
    { "id": 5, "image": "nome-immagine.jpg" }
    ```
-3. Aggiungi le chiavi corrispondenti in `src/multilang/Texts.js`:
-   ```js
-   "story_5_title":    { "ITA": "...", "ENG": "...", "ESP": "..." },
-   "story_5_subtitle": { "ITA": "...", "ENG": "...", "ESP": "..." },
-   "story_5_location": { "ITA": "...", "ENG": "...", "ESP": "..." },
-   "story_5":          { "ITA": "...", "ENG": "...", "ESP": "..." },
-   ```
+3. Crea la cartella `public/stories/story_5/` con i file:
+   - `details.json` con titolo, sottotitolo e luogo nelle 3 lingue
+   - `ITA.html`, `ENG.html`, `ESP.html` con il corpo della storia
 4. Deploya con `npm run deploy`
 
-Per rimuovere una storia: rimuovi la riga da `stories` in `src/config.json` (le chiavi in `Texts.js` possono restare).
+Per rimuovere una storia: rimuovi la riga da `stories` in `src/config.json` e cancella la cartella `public/stories/story_N/`.
 
 ---
 
@@ -63,7 +97,6 @@ Per rimuovere un file: elimina il file da `public/files/` e rimuovi la riga corr
 
 ## Running the app
 ```
-cd src
 npm start
 ```
 
