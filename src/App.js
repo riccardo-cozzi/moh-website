@@ -11,12 +11,13 @@ import { DownloadPage } from './pages/DownloadPage';
 import { GradientSvgDef } from './styles';
 
 function App() {
-  const [currentLanguage, setCurrentLanguage] = useState(Languages.ENG)
+  const [currentLanguage, setCurrentLanguage] = useState(() => {
+    const savedLanguageId = localStorage.getItem('language_id')
+    return Languages.all().find(({ id }) => id === savedLanguageId) || Languages.ENG
+  })
 
   useEffect(() => {
-    if (!currentLanguage) {
-      sessionStorage.setItem("language_id", Languages.ENG)
-    }
+    localStorage.setItem('language_id', currentLanguage.id)
   }, [currentLanguage])
 
   return (
