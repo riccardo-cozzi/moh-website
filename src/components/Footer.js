@@ -8,8 +8,7 @@ import { IconButton, Stack } from '@mui/material';
 import Contacts from './Contacts';
 import config from '../config.json';
 import { useState } from 'react';
-import { DownloadDialog } from '../pages/DownloadDialog';
-
+import {DownloadDialog} from './DownloadDialog';
 
 const Footer = () => {
     const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
@@ -37,12 +36,12 @@ const Footer = () => {
                     onClick={() => setDownloadDialogOpen(true)}
                     aria-label="Download"
                     sx={{
-                    color: 'black',
+                    color: 'green',
                     background: 'white',
                     ':hover': { background: '#ddd' },
                     }}
                 >
-                    <CloudDownloadIcon />
+                    <CloudDownloadIcon/>
                 </IconButton>
             </Stack>
 

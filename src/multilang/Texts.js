@@ -19,6 +19,9 @@ export const TEXT_KEYS = Object.freeze({
     CONTACT_SEND_BUTTON: 'contact_send_button',
     CONTACT_CARD_TITLE: 'contact_card_title',
     STORY_CLOSE_BUTTON: 'story_close_button',
+    DOWNLOAD_FILE: 'download_file',
+    OPEN_LINK: 'open_link',
+    OPEN_ATTACHMENT: 'open_attachment',
 });
 
 export const getText = (id, lang) => {
@@ -140,6 +143,21 @@ const texts = {
         "ENG": "Close",
         "ESP": "Cerrar"
     },
+    [TEXT_KEYS.DOWNLOAD_FILE]: {
+        "ITA": "Scarica il file",
+        "ENG": "Download file",
+        "ESP": "Descargar archivo"
+    },
+    [TEXT_KEYS.OPEN_LINK]: {
+        "ITA": "Apri il link",
+        "ENG": "Open link",
+        "ESP": "Abrir el enlace"
+    },
+    [TEXT_KEYS.OPEN_ATTACHMENT]: {
+        "ITA": "Apri l'allegato",
+        "ENG": "Open attachment",
+        "ESP": "Abrir el archivo adjunto"
+    }
 
 }
 

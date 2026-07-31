@@ -7,6 +7,7 @@ import PlaceIcon from '@mui/icons-material/Place';
 import CloseIcon from '@mui/icons-material/Close';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText, TEXT_KEYS } from '../multilang/Texts';
+import DownloadFileButton from './DownloadFileButton';
 import config from '../config.json';
 import { gradientTitle } from '../styles';
 
@@ -32,7 +33,7 @@ const Stories = () => {
               subtitle={story.subtitle[language.id]}
               location={story.location[language.id]}
               onOpen={() => handleChangeStory({ ...story, id: storyId.replace('story_', '') })}
-              imgurl={story.imgurl}
+              imgurl={`${process.env.PUBLIC_URL}/img/storiesImages/${story.image}`}
             />
           </Grid>
         )
@@ -82,6 +83,7 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
     paddingLeft: 50,
     height: 200,
     cursor: "pointer",
+    position: "relative",
   }
 
   const hoveredStoryCardStyle = {
@@ -115,7 +117,6 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
       {/* Image */}
       <Box style={hover ? hoverImageBox : imageBox} />
     </Stack>
-
 
   </Paper>
 
@@ -214,6 +215,15 @@ const StoryDialog = ({ story, onClose, ...props }) => {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
+          {story.attachment && (
+            <DownloadFileButton
+              url={story.attachment}
+              compact
+              external
+              title={getText(TEXT_KEYS.OPEN_ATTACHMENT, language.id)}
+              text={getText(TEXT_KEYS.OPEN_ATTACHMENT, language.id)}
+            />
+          )}
           <Button onClick={handleClose}>{getText(TEXT_KEYS.STORY_CLOSE_BUTTON, language.id)}</Button>
         </DialogActions>
       </Dialog>

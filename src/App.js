@@ -7,7 +7,6 @@ import { LanguageContext } from './multilang/LanguageContext';
 import { Languages } from './multilang/Languages';
 import { FloatingLanguageSelector } from './components/LanguageSelectors';
 import HomePage from './pages/HomePage';
-import { DownloadPage } from './pages/DownloadPage';
 import { GradientSvgDef } from './styles';
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
     <BrowserRouter>
       <GradientSvgDef />
       <Routes>
-        <Route path="/download" element={<DownloadPage />} />
         <Route path="/*" element={
           <LanguageContext.Provider value={[currentLanguage, setCurrentLanguage]}>
             <HomePage />

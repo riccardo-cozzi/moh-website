@@ -97,6 +97,17 @@ Per rimuovere una storia: rimuovi la riga da `stories` in `src/config.json` e ca
 
 Per un partner senza sito, lascia `url` vuoto (`"url": ""`). Per rimuoverlo, elimina la riga da `partners` e, se non utilizzata altrove, elimina anche l'immagine.
 
+Per aggiungere un file esterno a una storia, aggiungi la proprietà `attachment` all'oggetto della storia in `src/config.json`:
+
+```json
+{
+   "image": "nome-immagine.png",
+   "attachment": "https://esempio.com/file.pdf"
+}
+```
+
+Il pulsante viene mostrato nella card solo quando `attachment` è valorizzato e apre il link esterno in una nuova scheda.
+
 
 ## Aggiornare i file scaricabili dalla pagina `/download`
 

@@ -6,6 +6,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import DownloadFileButton from '../components/DownloadFileButton';
 import config from '../config.json';
 import { gradientTitle } from '../styles';
+import React from 'react';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText, TEXT_KEYS } from '../multilang/Texts';
 
@@ -84,6 +85,7 @@ export const DownloadDialog = ({ open, onClose }) => {
                                 compact
                                 external={!file}
                                 title={getText(file ? TEXT_KEYS.DOWNLOAD_FILE : TEXT_KEYS.OPEN_LINK, language.id)}
+                                text={getText(file ? TEXT_KEYS.DOWNLOAD_FILE : TEXT_KEYS.OPEN_LINK, language.id)}
                             />
                         </Paper>
                     ))}

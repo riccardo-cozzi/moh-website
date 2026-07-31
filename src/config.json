@@ -2,6 +2,7 @@
   "stories": {
     "story_1": {
       "image": "untie-knot.png",
+      "attachment": "https://www.canva.com/design/DAHIRiB7pPo/sPpbo2ZMmClbvE35qz_Jjw/edit",
       "title": {
         "ITA": "Untie the Knot",
         "ENG": "Untie the Knot",
@@ -127,8 +128,9 @@
       "label": "Starachowice Report – First Step to Europe"
     },
     {
-      "file": "Untie the KNot Stories to unravel, stories to change.pdf",
-      "label": "Untie the Knot – Stories to unravel, stories to change"
+      "file": "",
+      "label": "Untie the Knot – Stories to unravel, stories to change",
+      "externalLink": "https://www.canva.com/design/DAHIRiB7pPo/sPpbo2ZMmClbvE35qz_Jjw/edit"
     }
   ],
   "contactEmail": "moh.organisation@gmail.com",
