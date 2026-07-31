@@ -25,8 +25,14 @@ const PartnerBox = ({ src, href, alt }) => {
     return href ? <a className="partner-logo-link" href={href} target="_blank" rel="noopener noreferrer">{image}</a> : <Box component="span" className="partner-logo-link">{image}</Box>;
 };
 
+const capitalizeName = (name) => name.charAt(0).toUpperCase() + name.slice(1);
+
 export const PartnerListDialog = ({ open, onClose }) => {
     const [language] = React.useContext(LanguageContext);
+    const dialogPartners = Object.values(partnerInfo).sort((first, second) => (
+        first.alt.localeCompare(second.alt, undefined, { sensitivity: 'base' })
+    ));
+
     return <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm" PaperProps={{ sx: { borderRadius: { xs: 2, sm: 4 }, overflow: 'hidden' } }}>
         <DialogTitle sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: { xs: 3, sm: 4 } }}>
             <Typography variant="h5" sx={{ fontFamily: 'Neogen', color: '#147f89' }}>{getText("our_partnerships_title", language.id)}</Typography>
@@ -35,9 +41,9 @@ export const PartnerListDialog = ({ open, onClose }) => {
         <Divider />
         <DialogContent sx={{ px: { xs: 3, sm: 4 }, py: 3 }}>
             <Stack spacing={0.5}>
-                {Object.values(partnerInfo).map(({ src, alt, url }) => <Box key={alt} component={url ? 'a' : 'div'} href={url || undefined} target={url ? '_blank' : undefined} rel={url ? 'noopener noreferrer' : undefined} sx={{ display: 'flex', alignItems: 'center', gap: 2, px: 1.5, py: 0.5, borderRadius: 2, color: 'inherit', textDecoration: 'none', '&:hover': { backgroundColor: '#eef7f7' } }}>
+                {dialogPartners.map(({ src, alt, url }) => <Box key={alt} component={url ? 'a' : 'div'} href={url || undefined} target={url ? '_blank' : undefined} rel={url ? 'noopener noreferrer' : undefined} sx={{ display: 'flex', alignItems: 'center', gap: 2, px: 1.5, py: 0.5, borderRadius: 2, color: 'inherit', textDecoration: 'none', '&:hover': { backgroundColor: '#eef7f7' } }}>
                     <Box sx={{ width: 24, height: 24, p: 0.375, flexShrink: 0, borderRadius: '50%', backgroundColor: '#fff', border: '1px solid #e1e7e8' }}><img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} /></Box>
-                    <Typography variant="body1" fontWeight={500}>{alt}</Typography>
+                    <Typography variant="body1" fontWeight={500}>{capitalizeName(alt)}</Typography>
                 </Box>)}
             </Stack>
         </DialogContent>
