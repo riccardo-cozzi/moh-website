@@ -1,3 +1,4 @@
 /node_modules
 /build
-/.DS_Store
+# File metadata di macOS, in qualsiasi cartella
+.DS_Store

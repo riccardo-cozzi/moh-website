@@ -2,7 +2,7 @@
   
   "stories": {
     "story_1": {
-      "image": "cleanup.jpg",
+      "image": "untie-knot.png",
       "title": {
         "ITA": "Untie the Knot",
         "ENG": "Untie the Knot",
@@ -56,7 +56,7 @@
       }
     },
     "story_4": {
-      "image": "workers.jpg",
+      "image": "cactus.png",
       "title": {
         "ITA": "CACT4US 2.0",
         "ENG": "CACT4US 2.0",
@@ -74,7 +74,7 @@
       }
     },
     "story_5": {
-      "image": "workers.jpg",
+      "image": "under-skin.png",
       "title": {
         "ITA": "Under my Skin",
         "ENG": "Under my Skin",
@@ -92,7 +92,7 @@
       }
     },
     "story_6": {
-      "image": "workers.jpg",
+      "image": "rehab.png",
       "title": {
         "ITA": "Youthwork ReHab",
         "ENG": "Youthwork ReHab",

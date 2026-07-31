@@ -162,7 +162,13 @@ const StoryDialog = ({ story, onClose, ...props }) => {
           <Grid container spacing={0}>
 
             <Grid item xs={12}>
-              <img src={imageUrl} style={{ maxHeight: 350, width: "100%", borderRadius: 5 }} />
+              <a href={imageUrl} target="_blank" rel="noopener noreferrer" aria-label={`Apri immagine: ${story.title[language.id]}`}>
+                <img
+                  src={imageUrl}
+                  alt={story.title[language.id]}
+                  style={{ maxHeight: 350, width: "100%", borderRadius: 5, cursor: 'pointer' }}
+                />
+              </a>
             </Grid>
 
             <Grid item>
