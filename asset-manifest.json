@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7b4a65c9.css",
-    "main.js": "/static/js/main.afa33a3d.js",
+    "main.js": "/static/js/main.e5fea15b.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/didi.png": "/static/media/didi.1a96b71861050309c553.png",
     "static/media/moh-circle.png": "/static/media/moh-circle.a4f20945f034909cb0f1.png",
@@ -9,14 +9,15 @@
     "static/media/moh-text.png": "/static/media/moh-text.14239eed9ed2c447f4f7.png",
     "static/media/Neogen-Black.ttf": "/static/media/Neogen-Black.59c7e16ca4ea5875141d.ttf",
     "static/media/fullbody3.jpg": "/static/media/fullbody3.4bd59dff61d14835d057.jpg",
+    "static/media/logoE+.png": "/static/media/logoE+.8d97de8b1ad9e69b637f.png",
     "static/media/DeepHero.ttf": "/static/media/DeepHero.b462835fe9f604f617c7.ttf",
     "index.html": "/index.html",
     "main.7b4a65c9.css.map": "/static/css/main.7b4a65c9.css.map",
-    "main.afa33a3d.js.map": "/static/js/main.afa33a3d.js.map",
+    "main.e5fea15b.js.map": "/static/js/main.e5fea15b.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b4a65c9.css",
-    "static/js/main.afa33a3d.js"
+    "static/js/main.e5fea15b.js"
   ]
 }
