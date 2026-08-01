@@ -10,6 +10,7 @@ import Contacts from './Contacts';
 import config from '../config.json';
 import { useState } from 'react';
 import {DownloadDialog} from './DownloadDialog';
+import previousLogo from '../img/logo_transp.png';
 
 const Footer = () => {
     const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
@@ -26,6 +27,12 @@ const Footer = () => {
             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <Contacts />
             </Box>
+            <Box
+                component="img"
+                src={previousLogo}
+                alt="MOH"
+                sx={{ width: 90, height: 90, objectFit: 'contain', my: 2 }}
+            />
             <Stack direction="row" justifyContent="center" alignItems="left" spacing={2}>
                 <a href={config.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
                     <InstagramIcon fontSize="large" sx={{ color: '#E1306C' }} />

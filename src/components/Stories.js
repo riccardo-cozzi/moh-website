@@ -91,11 +91,12 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
 
   const hoveredStoryCardStyle = {
     ...storyCardStyle,
-    background: "rgba(232, 237, 247)"
   }
 
 
-  return <Paper style={hover ? hoveredStoryCardStyle : storyCardStyle}
+  return <Paper
+    className={`story-card${hover ? ' story-card-hover' : ''}`}
+    style={hover ? hoveredStoryCardStyle : storyCardStyle}
     onMouseEnter={() => setHover(true)}
     onMouseLeave={() => setHover(false)}
     onClick={() => onOpen()}

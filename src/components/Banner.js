@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
-import logo_transp from '../img/logo_transp.png';
+import mohCircle from '../img/moh-circle.png';
+import mohText from '../img/moh-text.png';
 import LaptopIcon from '@mui/icons-material/Laptop';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 
@@ -44,14 +45,14 @@ const Banner = () => {
             {
                 isMobile ? 
                     // ------------------------ Mobile version ------------------------
-                    <Grid container spacing={0} direction={"row"} sx={{padding:5}}>
+                    <Grid container spacing={0} direction={"row"} sx={{ padding: { xs: 2, sm: 5 }, width: '100%', margin: 0 }}>
                         <Grid item xs={12}
                             sx={{
                                 justifyContent:"center", 
                                 justifyItems:"center", 
                                 display:"flex",
                             }}> 
-                                <img src={logo_transp} style={{width: 350, height: 350}} />
+                                <LogoMark size="min(350px, 100%)" />
                         </Grid>
                         <Grid item xs={12}
                             sx={{
@@ -88,7 +89,7 @@ const Banner = () => {
                                 justifyItems:"center", 
                                 display:"flex"
                             }}>
-                                <img src={logo_transp} style={{ width: 550, height: 550 }} />
+                                <LogoMark size={550} />
                         </Grid>
                     </Grid>
                     
@@ -99,5 +100,32 @@ const Banner = () => {
         </Box>
     </>
 }
+
+const LogoMark = ({ size }) => (
+    <Box
+        sx={{
+            position: 'relative',
+            width: size,
+            height: size,
+            maxWidth: '100%',
+            aspectRatio: '1 / 1',
+        }}
+    >
+        <Box
+            component="img"
+            src={mohCircle}
+            alt=""
+            aria-hidden="true"
+            className="banner-logo-circle"
+            sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+        />
+        <Box
+            component="img"
+            src={mohText}
+            alt="Mobility Opportunities Happening"
+            sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+        />
+    </Box>
+);
 
 export default Banner;

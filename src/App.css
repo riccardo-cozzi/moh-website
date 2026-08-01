@@ -34,6 +34,32 @@
   color: #61dafb;
 }
 
+.story-card {
+  isolation: isolate;
+}
+
+.story-card::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  z-index: 0;
+  border-radius: 64px;
+  background: linear-gradient(135deg, transparent 20%, rgba(0, 148, 174, 0.25) 100%);
+  filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.story-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.story-card-hover::after {
+  opacity: 1;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
