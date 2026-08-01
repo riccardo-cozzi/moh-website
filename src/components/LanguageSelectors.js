@@ -69,11 +69,20 @@ export const FloatingLanguageSelector = () => {
             return (
               <SpeedDialAction
                 sx={{
-                  color: "black", background: isSelected ? background_selected : background_unselected
+                  color: "black",
+                  background: isSelected ? background_selected : background_unselected,
+                  '& .MuiSpeedDialAction-fab': {
+                    width: 48,
+                    height: 48,
+                  },
                 }}
                 
                 key={allLanguages[languageKey].id}
-                icon={allLanguages[languageKey].flag}
+                icon={
+                  <span style={{ fontSize: '1.4rem', lineHeight: 1 }}>
+                    {allLanguages[languageKey].flag}
+                  </span>
+                }
                 tooltipTitle={allLanguages[languageKey].label}
                 onClick={() => handleChangeLanguage(allLanguages[languageKey].id)}
               />

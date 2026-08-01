@@ -21,7 +21,7 @@ const Footer = () => {
     return (
         <footer style={{
             paddingTop: '0',
-            paddingBottom: '50px',
+            paddingBottom: '100px',
             textAlign: 'center',
             width: '100%',
             display: 'flex',
@@ -65,6 +65,31 @@ const Footer = () => {
 
             <Box component="a" href={privacyPolicyUrl} target="_blank" rel="noopener noreferrer" sx={{ mt: 2, color: '#147f89', fontSize: '0.85rem' }}>
                 {getText(TEXT_KEYS.PRIVACY_POLICY_LINK, language.id)}
+            </Box>
+
+            <Box
+                sx={{
+                    position: 'fixed',
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    width: '100vw',
+                    zIndex: 1100,
+                    px: 2,
+                    py: 1.5,
+                    color: 'white',
+                    background: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexWrap: 'wrap',
+                    gap: { xs: 1, sm: 3 },
+                    fontSize: { xs: '0.75rem', sm: '0.85rem' },
+                    textAlign: 'center',
+                }}
+            >
+                <span>Codice Fiscale: 93498900724</span>
+                <span>PEC: moh.organisation@pec.it</span>
+                <span>OID: 10033226</span>
             </Box>
 
             <DownloadDialog
