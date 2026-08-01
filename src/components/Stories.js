@@ -24,7 +24,7 @@ const Stories = () => {
     setSelectedStory(story)
   }
   return <>
-    <Grid container spacing={5} direction={"row"} sx={{ paddingLeft: 10, paddingRight: 10 }}>
+    <Grid container spacing={5} direction={"row"} sx={{ paddingLeft: 0, paddingRight: 0 }}>
       {
         Object.entries(config.stories).map(([storyId, story]) =>
           <Grid item xs={12} md={6} key={storyId}>
@@ -81,7 +81,10 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
     paddingTop: 50,
     paddingBottom: 0,
     paddingLeft: 50,
-    height: 200,
+    paddingRight: 24,
+    minHeight: 200,
+    height: "auto",
+    boxSizing: "border-box",
     cursor: "pointer",
     position: "relative",
   }
@@ -98,17 +101,23 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
     onClick={() => onOpen()}
     elevation={hover ? 20 : 10}>
 
-    <Stack pacing={1} height={"100%"}>
+    <Stack spacing={1} sx={{ minHeight: 200, width: '100%' }}>
 
       {/* Content */}
-      <Stack justifyContent={"flex-start"} spacing={5}>
+      <Stack justifyContent={"flex-start"} spacing={{ xs: 2, sm: 5 }}>
 
         <Box>
-          <Typography gutterBottom variant={isMobile ? "h6" : "h4"} sx={gradientTitle}> {title} </Typography>
+          <Typography
+            gutterBottom
+            variant={isMobile ? "h6" : "h4"}
+            sx={{ ...gradientTitle, overflowWrap: 'anywhere' }}
+          >
+            {title}
+          </Typography>
           <LocationBox text={location} />
         </Box>
 
-        <Typography variant="h6" color={"gray"}>
+        <Typography variant="h6" color={"gray"} sx={{ overflowWrap: 'anywhere' }}>
           {subtitle}
         </Typography>
 
@@ -205,12 +214,21 @@ const StoryDialog = ({ story, onClose, ...props }) => {
 
           <Grid item xs={12}>
             <br />
-            <Typography variant="subtitle1" color="text.secondary" fontStyle="italic">
+            <Typography
+              variant="subtitle1"
+              color="text.secondary"
+              fontStyle="italic"
+              sx={{ fontSize: { xs: '0.85rem', sm: '1rem' } }}
+            >
               {story.subtitle[language.id]}
             </Typography>
           </Grid>
 
-          <DialogContentText id="alert-dialog-slide-description" component="div">
+          <DialogContentText
+            id="alert-dialog-slide-description"
+            component="div"
+            sx={{ fontSize: { xs: '0.85rem', sm: '1rem' }, lineHeight: 1.6 }}
+          >
             <div dangerouslySetInnerHTML={{ __html: storyHtml }} />
           </DialogContentText>
         </DialogContent>

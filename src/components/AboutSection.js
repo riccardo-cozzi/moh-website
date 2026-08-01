@@ -36,12 +36,17 @@ const AboutSection = () => {
     return <Stack direction="column" justifyContent="center" alignItems="center" spacing={5} sx={{ px: { xs: 2, sm: 6, md: 10 }, py: 10 }}>
 
         {/* About Us Title */}
-        <Typography variant="h3" align='center' sx={{ fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>
+        <Typography variant="h3" align='center' sx={{ fontSize: { xs: '1.8rem', sm: '3rem' }, fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>
             {getText(TEXT_KEYS.ABOUT_US_TITLE, language.id)}
         </Typography>
 
         {/* About Us Content */}
-        <Typography variant="h4" align='center' color="gray" margin={10}>
+        <Typography
+            variant="h4"
+            align='center'
+            color="gray"
+            sx={{ fontSize: { xs: '1.2rem', sm: '2.125rem' }, m: { xs: 2, sm: 10 } }}
+        >
             {getText(TEXT_KEYS.ABOUT_US_CONTENT, language.id)}
         </Typography>
 
