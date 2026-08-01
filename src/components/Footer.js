@@ -8,12 +8,16 @@ import { IconButton, Stack } from '@mui/material';
 import { Box } from '@mui/material';
 import Contacts from './Contacts';
 import config from '../config.json';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {DownloadDialog} from './DownloadDialog';
 import previousLogo from '../img/logo_transp.png';
+import { LanguageContext } from '../multilang/LanguageContext';
+import { getText, TEXT_KEYS } from '../multilang/Texts';
 
 const Footer = () => {
     const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
+    const [language] = useContext(LanguageContext);
+    const privacyPolicyUrl = `${process.env.PUBLIC_URL}/${config.privacyPolicy[language.id]}`;
     return (
         <footer style={{
             paddingTop: '0',
@@ -58,6 +62,10 @@ const Footer = () => {
                     <CloudDownloadIcon/>
                 </IconButton>
             </Stack>
+
+            <Box component="a" href={privacyPolicyUrl} target="_blank" rel="noopener noreferrer" sx={{ mt: 2, color: '#147f89', fontSize: '0.85rem' }}>
+                {getText(TEXT_KEYS.PRIVACY_POLICY_LINK, language.id)}
+            </Box>
 
             <DownloadDialog
                 open={downloadDialogOpen}

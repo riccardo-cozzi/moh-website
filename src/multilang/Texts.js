@@ -21,6 +21,7 @@ export const TEXT_KEYS = Object.freeze({
     STORY_CLOSE_BUTTON: 'story_close_button',
     DOWNLOAD_FILE: 'download_file',
     OPEN_LINK: 'open_link',
+    PRIVACY_POLICY_LINK: 'privacy_policy_link',
     OPEN_ATTACHMENT: 'open_attachment',
 });
 
@@ -152,6 +153,11 @@ const texts = {
         "ITA": "Apri il link",
         "ENG": "Open link",
         "ESP": "Abrir el enlace"
+    },
+    [TEXT_KEYS.PRIVACY_POLICY_LINK]: {
+        "ITA": "Privacy e cookie",
+        "ENG": "Privacy and cookies",
+        "ESP": "Privacidad y cookies"
     },
     [TEXT_KEYS.OPEN_ATTACHMENT]: {
         "ITA": "Apri l'allegato",

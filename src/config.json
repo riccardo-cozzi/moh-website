@@ -137,6 +137,11 @@
     "youtube": "https://www.youtube.com/channel/UCetgwIJ58UBTWKiZUNe9Ecw",
     "x": "https://x.com/MOH43632710"
   },
+  "privacyPolicy": {
+    "ITA": "files/privacy-ITA.html",
+    "ENG": "files/privacy-ENG.html",
+    "ESP": "files/privacy-ESP.html"
+  },
   "partners": [
     {
       "image": "arterra.png",
