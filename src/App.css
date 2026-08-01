@@ -43,12 +43,26 @@
   }
 }
 
+.banner-logo-circle {
+  animation: banner-logo-rotation 75s linear infinite reverse;
+  transform-origin: center;
+}
+
+@keyframes banner-logo-rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .partners-marquee {
   overflow: hidden;
   width: 100%;
   padding: 32px 0;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.partners-marquee + .partners-marquee {
+  margin-top: -24px;
 }
 
 .partners-marquee-track {
@@ -60,6 +74,10 @@
 }
 
 .partners-marquee:hover .partners-marquee-track { animation-play-state: paused; }
+
+.partners-marquee-track-reverse {
+  animation-direction: reverse;
+}
 
 .partner-logo-link {
   display: flex;
@@ -85,5 +103,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .partners-marquee-track { animation: none; transform: translateX(0); }
+  .partners-marquee-track,
+  .banner-logo-circle { animation: none; transform: none; }
 }

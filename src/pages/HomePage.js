@@ -55,7 +55,7 @@ const HomePage = () => {
                             </Grid>
 
                             {/* Partners */}
-                            <Grid item sx={{ width: '100%', px: 10 }} >
+                            <Grid item sx={{ width: '100%' }} >
                                 <Box>
                                     <Typography variant="h3" align='center' margin={10} sx={{ fontSize: { xs: '1.8rem', sm: '3rem' }, fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>{getText(TEXT_KEYS.OUR_PARTNERSHIPS_TITLE, language.id)}</Typography>
                                     <Partners />
@@ -66,7 +66,9 @@ const HomePage = () => {
                                 </Box>
                             </Grid>
 
-                            <Footer />
+                            <Grid item sx={{ width: '100%' }}>
+                                <Footer />
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>

@@ -100,11 +100,11 @@ export const InfoBox = ({ icon, title, text }) => {
                     {icon}
                 </Grid>
                 <Grid item xs={12} sx={{ justifyContent: "center", justifyItems: "center", display: "flex", fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>
-                    <Typography variant="h5" align='center' margin={2} sx={{ fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>
+                    <Typography variant="h5" align='center' sx={{ m: { xs: 1, sm: 2 }, fontSize: { xs: '1.15rem', sm: '1.5rem' }, fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block', overflowWrap: 'anywhere' }}>
                         {title}</Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ justifyContent: "center", justifyItems: "center", display: "flex" }}>
-                    <Typography variant="h6" color={"gray"}>{text}</Typography>
+                    <Typography variant="h6" color={"gray"} sx={{ fontSize: { xs: '0.9rem', sm: '1.25rem' }, lineHeight: 1.5, textAlign: 'center', overflowWrap: 'anywhere' }}>{text}</Typography>
                 </Grid>
             </Grid>
         </Paper>

@@ -15,10 +15,17 @@ const Partners = () => {
     const scrollingPartners = [...partners, ...partners];
 
     return <Box marginBottom={1} sx={{ overflow: 'hidden', width: '100%' }}>
-        <Box className="partners-marquee" aria-label="Partner di MOH">
+        <Box className="partners-marquee" aria-label="Partner di MOH, prima lista">
             <Box className="partners-marquee-track">
                 {scrollingPartners.map((image, index) => (
                     <PartnerBox src={image.src} href={image.url} alt={image.alt} key={`${image.alt}-${index}`} />
+                ))}
+            </Box>
+        </Box>
+        <Box className="partners-marquee" aria-label="Partner di MOH, seconda lista">
+            <Box className="partners-marquee-track partners-marquee-track-reverse">
+                {scrollingPartners.map((image, index) => (
+                    <PartnerBox src={image.src} href={image.url} alt={image.alt} key={`${image.alt}-reverse-${index}`} />
                 ))}
             </Box>
         </Box>

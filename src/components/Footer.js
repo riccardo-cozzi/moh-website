@@ -5,6 +5,7 @@ import YoutubeIcon from '@mui/icons-material/YouTube';
 import XIcon from '@mui/icons-material/X';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import { IconButton, Stack } from '@mui/material';
+import { Box } from '@mui/material';
 import Contacts from './Contacts';
 import config from '../config.json';
 import { useState } from 'react';
@@ -14,11 +15,17 @@ const Footer = () => {
     const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
     return (
         <footer style={{
-            paddingTop: '200px',
+            paddingTop: '0',
             paddingBottom: '50px',
             textAlign: 'center',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
         }}>
-            <Contacts />
+            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <Contacts />
+            </Box>
             <Stack direction="row" justifyContent="center" alignItems="left" spacing={2}>
                 <a href={config.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
                     <InstagramIcon fontSize="large" sx={{ color: '#E1306C' }} />
