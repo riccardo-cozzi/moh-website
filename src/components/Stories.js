@@ -166,7 +166,15 @@ const StoryDialog = ({ story, onClose, ...props }) => {
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
-        PaperProps={{ sx: { height: 750, width: 600, overflow: 'hidden', borderRadius: 5 } }}
+        PaperProps={{
+          sx: {
+            height: { xs: 'calc(100% - 32px)', sm: 750 },
+            width: { xs: 'calc(100% - 32px)', sm: 700, md: 900 },
+            maxWidth: 'calc(100% - 32px)',
+            overflow: 'hidden',
+            borderRadius: 5,
+          }
+        }}
       >
         <DialogTitle sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 2 }}>
           <Typography component="span" sx={gradientTitle}>
@@ -182,14 +190,18 @@ const StoryDialog = ({ story, onClose, ...props }) => {
 
             <Grid item xs={12}>
               <a href={imageUrl} target="_blank" rel="noopener noreferrer" aria-label={`Apri immagine: ${story.title[language.id]}`}>
-                <img
+                <Box
+                  component="img"
                   src={imageUrl}
                   alt={story.title[language.id]}
-                  style={{
+                  sx={{
                     display: 'block',
-                    maxHeight: 350,
-                    width: "100%",
-                    borderRadius: 20,
+                    width: { xs: "100%", sm: "80%" },
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                    margin: "0 auto",
+                    borderRadius: 5,
                     cursor: 'pointer',
                     // WebkitMaskImage: 'linear-gradient(to bottom, black 48%, transparent 100%)',
                     // maskImage: 'linear-gradient(to bottom, black 48%, transparent 100%)',
