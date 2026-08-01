@@ -34,6 +34,240 @@
   color: #61dafb;
 }
 
+.impact-bento {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+
+.impact-bento-eyebrow {
+  margin-bottom: 1rem;
+  color: #147f89;
+  font-family: 'Neogen';
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.impact-bento-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(240px, 0.9fr);
+  gap: 1rem;
+}
+
+.impact-bento-card {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  padding: clamp(1.35rem, 3vw, 2.5rem);
+  border: 1px solid rgba(0, 148, 174, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 35px rgba(38, 96, 104, 0.1);
+}
+
+.impact-bento-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 55%;
+}
+
+.impact-bento-chip {
+  color: #147f89 !important;
+  background: rgba(0, 148, 174, 0.1) !important;
+  font-weight: 600 !important;
+}
+
+.impact-bento-map-card .impact-bento-number {
+  margin-top: 2.25rem;
+}
+
+.impact-bento-projects-card .impact-bento-number {
+  margin-top: 2.25rem;
+}
+
+.impact-bento-number {
+  position: relative;
+  z-index: 2;
+  margin: 1.5rem 0;
+  color: #2e7d32;
+  font-family: 'Neogen';
+  font-size: clamp(3.4rem, 8vw, 6rem) !important;
+  line-height: 0.95 !important;
+}
+
+.impact-bento-label {
+  color: #243238;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.impact-bento-description {
+  position: relative;
+  z-index: 2;
+  margin-top: 0.6rem !important;
+  color: #607d82;
+  font-size: 0.95rem !important;
+  line-height: 1.45 !important;
+}
+
+.impact-countries-box {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.impact-countries-list {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: .75rem;
+  overflow: visible;
+  white-space: normal;
+  margin-top: 0.15rem !important;
+  padding: 0 !important;
+  color: #607d82;
+  font-size: 0.62rem !important;
+  line-height: 1.15;
+}
+
+.impact-country {
+  flex: 0 0 auto;
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  cursor: default;
+  transition: transform 0.2s ease;
+}
+
+.impact-country:hover {
+  transform: scale(2.45);
+}
+
+.impact-bento-map-card {
+  min-height: 330px;
+  background: linear-gradient(135deg, rgba(255,255,255,.95), rgba(224, 247, 247, .9));
+}
+
+.impact-map {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.impact-map-pin {
+  position: absolute;
+  z-index: 1;
+  color: #0094ae;
+  right: 8%;
+  bottom: 8%;
+  font-size: clamp(5rem, 12vw, 9rem) !important;
+  filter: drop-shadow(0 3px 3px rgba(0, 80, 90, .2));
+}
+
+.impact-bento-projects-card {
+  background: linear-gradient(145deg, #fff, #f0f8ef);
+}
+
+.impact-bento-icon {
+  color: #0094ae;
+  font-size: 2.5rem !important;
+}
+
+.impact-bento-orbit {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgba(0, 148, 174, .2);
+  border-radius: 50%;
+}
+
+.impact-bento-orbit span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2e7d32;
+}
+
+.impact-bento-orbit span:nth-child(1) { top: 18px; left: 42px; }
+.impact-bento-orbit span:nth-child(2) { right: 20px; top: 70px; background: #0094ae; }
+.impact-bento-orbit span:nth-child(3) { bottom: 18px; left: 58px; background: #f4a261; }
+
+.impact-bento-network-card {
+  grid-column: 1 / -1;
+  min-height: 190px;
+  background: linear-gradient(120deg, #eef8f5, #fff);
+}
+
+.impact-lead-projects-image {
+  width: 150px;
+  height: 150px;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 80, 90, 0.2);
+}
+
+.impact-lead-projects-visual {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.impact-bento-network-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.impact-bento-network-heading .impact-bento-number { margin: 0.75rem 0; }
+
+.impact-network-ticker {
+  display: flex;
+  position: static;
+  align-self: flex-start;
+  margin: 0;
+  padding: 1rem 0;
+  gap: 1rem;
+  color: rgba(0, 148, 174, .55);
+  font-family: 'Neogen';
+  font-size: 1.35rem;
+  letter-spacing: .2em;
+}
+
+@media (max-width: 700px) {
+  .impact-bento-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, .9fr); gap: .6rem; }
+  .impact-bento-card { min-height: 220px; padding: 1rem; border-radius: 20px; }
+  .impact-bento-card-content { max-width: 100%; }
+  .impact-bento-map-card { min-height: 250px; }
+  .impact-bento-map-card .impact-bento-card-content { max-width: 72%; }
+  .impact-countries-list { gap: .4rem; font-size: 0.55rem !important; }
+  .impact-country { font-size: 1rem; }
+  .impact-bento-chip { max-width: 100%; font-size: .65rem !important; }
+  .impact-bento-number { margin: 1rem 0; font-size: 2.8rem !important; }
+  .impact-bento-map-card .impact-bento-number { margin-top: 1.5rem; }
+  .impact-bento-projects-card .impact-bento-number { margin-top: 1.5rem; }
+  .impact-bento-label { font-size: .82rem !important; }
+  .impact-bento-description { font-size: .75rem !important; }
+  .impact-bento-network-card { grid-column: 1 / -1; min-height: 170px; }
+  .impact-lead-projects-visual { right: 1rem; bottom: 1rem; gap: .5rem; }
+  .impact-lead-projects-image { border-width: 3px; }
+  .impact-network-ticker {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+}
+
 .story-card {
   isolation: isolate;
 }

@@ -10,6 +10,7 @@ import DeepHero from '../fonts/DeepHero.ttf'
 import { getText, TEXT_KEYS } from '../multilang/Texts';
 import { LanguageContext } from '../multilang/LanguageContext';
 import AboutSection from '../components/AboutSection';
+import ImpactBento from '../components/ImpactBento';
 
 
 
@@ -44,6 +45,12 @@ const HomePage = () => {
                             {/* Info Boxes */}
                             <Grid item sx={{ width: '100%' }} >
                                 <AboutSection />
+                                <ImpactBento />
+                            </Grid>
+
+                            {/* Impact bento */}
+                            <Grid item sx={{ width: '100%' }}>
+                                
                             </Grid>
 
                             {/* Stories */}

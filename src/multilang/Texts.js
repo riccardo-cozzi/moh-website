@@ -23,6 +23,13 @@ export const TEXT_KEYS = Object.freeze({
     OPEN_LINK: 'open_link',
     PRIVACY_POLICY_LINK: 'privacy_policy_link',
     OPEN_ATTACHMENT: 'open_attachment',
+    IMPACT_TITLE: 'impact_title',
+    IMPACT_COUNTRIES_LABEL: 'impact_countries_label',
+    IMPACT_COUNTRIES_DESCRIPTION: 'impact_countries_description',
+    IMPACT_OWN_PROJECTS_LABEL: 'impact_own_projects_label',
+    IMPACT_OWN_PROJECTS_DESCRIPTION: 'impact_own_projects_description',
+    IMPACT_PARTNER_PROJECTS_LABEL: 'impact_partner_projects_label',
+    IMPACT_PARTNER_PROJECTS_DESCRIPTION: 'impact_partner_projects_description',
 });
 
 export const getText = (id, lang) => {
@@ -163,6 +170,41 @@ const texts = {
         "ITA": "Apri l'allegato",
         "ENG": "Open attachment",
         "ESP": "Abrir el archivo adjunto"
+    },
+    [TEXT_KEYS.IMPACT_TITLE]: {
+        "ITA": "Il nostro impatto",
+        "ENG": "Our impact",
+        "ESP": "Nuestro impacto"
+    },
+    [TEXT_KEYS.IMPACT_COUNTRIES_LABEL]: {
+        "ITA": "Mappa",
+        "ENG": "Our Map",
+        "ESP": "Nuestro mapa"
+    },
+    [TEXT_KEYS.IMPACT_COUNTRIES_DESCRIPTION]: {
+        "ITA": "I paesi dove abbiamo piantato un seme",
+        "ENG": "Countries where we planted a seed",
+        "ESP": "Países donde hemos plantado una semilla"
+    },
+    [TEXT_KEYS.IMPACT_OWN_PROJECTS_LABEL]: {
+        "ITA": "Progetti guidati dal nostro team",
+        "ENG": "Projects led by our team",
+        "ESP": "Proyectos liderados por nuestro equipo"
+    },
+    [TEXT_KEYS.IMPACT_OWN_PROJECTS_DESCRIPTION]: {
+        "ITA": "Progetti Leader",
+        "ENG": "Lead projects",
+        "ESP": "Proyectos liderados"
+    },
+    [TEXT_KEYS.IMPACT_PARTNER_PROJECTS_LABEL]: {
+        "ITA": "Giovani mandati all’estero",
+        "ENG": "Young people sent abroad",
+        "ESP": "Jóvenes enviados al extranjero"
+    },
+    [TEXT_KEYS.IMPACT_PARTNER_PROJECTS_DESCRIPTION]: {
+        "ITA": "Con progetti Partner",
+        "ENG": "With partner projects",
+        "ESP": "Con proyectos de socios"
     }
 
 }

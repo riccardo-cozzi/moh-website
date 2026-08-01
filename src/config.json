@@ -142,6 +142,39 @@
     "ENG": "files/privacy-ENG.html",
     "ESP": "files/privacy-ESP.html"
   },
+  "impactData": {
+    "ownProjects": "60+",
+    "youngPeopleSentAbroad": "300+",
+    "countriesList": [
+      "Italia",
+      "Belgio",
+      "Bulgaria",
+      "Croazia",
+      "Danimarca",
+      "Estonia",
+      "Finlandia",
+      "Francia",
+      "Germania",
+      "Grecia",
+      "Lettonia",
+      "Lussemburgo",
+      "Polonia",
+      "Portogallo",
+      "Repubblica Ceca",
+      "Romania",
+      "Slovacchia",
+      "Slovenia",
+      "Spagna",
+      "Svezia",
+      "Ungheria",
+      "Islanda",
+      "Turchia",
+      "Albania",
+      "Azerbaigian",
+      "Georgia",
+      "Giordania"
+    ]
+  },
   "partners": [
     {
       "image": "arterra.png",
