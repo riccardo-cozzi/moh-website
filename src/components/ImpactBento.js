@@ -63,13 +63,13 @@ const ImpactBento = () => {
                         </Box>
                     </Box>
                     <Box className="impact-map" aria-hidden="true">
-                        <LocationOnIcon className="impact-map-pin" />
+                        <LocationOnIcon className="impact-map-pin" sx={{ fontSize: '4rem !important' }}/>
                     </Box>
                 </Box>
 
                 {/* 2nd */}
                 <Box className="impact-bento-card impact-bento-projects-card">
-                    <RocketLaunchIcon className="impact-bento-icon" sx={{ fontSize: '5rem !important' }} />
+                    <RocketLaunchIcon className="impact-bento-icon" sx={{ fontSize: '4rem !important' }} />
                     <Typography className="impact-bento-number" >
                         {config.impactData.youngPeopleSentAbroad}
                     </Typography>
@@ -82,7 +82,7 @@ const ImpactBento = () => {
 
                 <Box className="impact-bento-card impact-bento-network-card">
                     <Box className="impact-bento-network-heading">
-                        <HubIcon className="impact-bento-icon" sx={{ fontSize: '5rem !important' }} />
+                        <HubIcon className="impact-bento-icon" sx={{ fontSize: '3rem !important' }} />
                         <Box>
                             <Typography className="impact-bento-number">{config.impactData.ownProjects}</Typography>
                         </Box>

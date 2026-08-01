@@ -103,6 +103,7 @@
   font-size: 1.05rem !important;
   font-weight: 700 !important;
   line-height: 1.2 !important;
+  max-width: 50vw;
 }
 
 .impact-bento-description {
@@ -174,7 +175,6 @@
 
 .impact-bento-icon {
   color: #0094ae;
-  font-size: 2.5rem !important;
 }
 
 .impact-bento-orbit {
@@ -234,7 +234,7 @@
 .impact-network-ticker {
   display: flex;
   position: static;
-  align-self: flex-start;
+  align-self: flex-end;
   margin: 0;
   padding: 1rem 0;
   gap: 1rem;
