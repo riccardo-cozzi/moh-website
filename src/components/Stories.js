@@ -24,6 +24,8 @@ const Stories = () => {
     setSelectedStory(story)
   }
   return <>
+    <Typography variant="h3" align='center' marginBottom={7} marginTop={0} sx={{ fontSize: { xs: '1.8rem', sm: '3rem' }, fontFamily: 'Neogen', backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}> {getText(TEXT_KEYS.OUR_STORIES_TITLE, language.id)} </Typography>
+
     <Grid container spacing={5} direction={"row"} sx={{ paddingLeft: 0, paddingRight: 0 }}>
       {
         Object.entries(config.stories).map(([storyId, story]) =>
@@ -94,41 +96,43 @@ const StoryCard = ({ title, subtitle, location, onOpen, imgurl }) => {
   }
 
 
-  return <Paper
-    className={`story-card${hover ? ' story-card-hover' : ''}`}
-    style={hover ? hoveredStoryCardStyle : storyCardStyle}
-    onMouseEnter={() => setHover(true)}
-    onMouseLeave={() => setHover(false)}
-    onClick={() => onOpen()}
-    elevation={hover ? 20 : 10}>
+  return <>
+    <Paper
+      className={`story-card${hover ? ' story-card-hover' : ''}`}
+      style={hover ? hoveredStoryCardStyle : storyCardStyle}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      onClick={() => onOpen()}
+      elevation={hover ? 20 : 10}>
 
-    <Stack spacing={1} sx={{ minHeight: 200, width: '100%' }}>
+      <Stack spacing={1} sx={{ minHeight: 200, width: '100%' }}>
 
-      {/* Content */}
-      <Stack justifyContent={"flex-start"} spacing={{ xs: 2, sm: 5 }}>
+        {/* Content */}
+        <Stack justifyContent={"flex-start"} spacing={{ xs: 2, sm: 5 }}>
 
-        <Box>
-          <Typography
-            gutterBottom
-            variant={isMobile ? "h6" : "h4"}
-            sx={{ ...gradientTitle, overflowWrap: 'anywhere' }}
-          >
-            {title}
+          <Box>
+            <Typography
+              gutterBottom
+              variant={isMobile ? "h6" : "h4"}
+              sx={{ ...gradientTitle, overflowWrap: 'anywhere' }}
+            >
+              {title}
+            </Typography>
+            <LocationBox text={location} />
+          </Box>
+
+          <Typography variant="h6" color={"gray"} sx={{ overflowWrap: 'anywhere' }}>
+            {subtitle}
           </Typography>
-          <LocationBox text={location} />
-        </Box>
 
-        <Typography variant="h6" color={"gray"} sx={{ overflowWrap: 'anywhere' }}>
-          {subtitle}
-        </Typography>
+        </Stack>
 
+        {/* Image */}
+        <Box style={hover ? hoverImageBox : imageBox} />
       </Stack>
 
-      {/* Image */}
-      <Box style={hover ? hoverImageBox : imageBox} />
-    </Stack>
-
-  </Paper>
+    </Paper>
+    </>
 
 }
 
