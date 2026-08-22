@@ -12,7 +12,9 @@ import {
     TextField,
     Snackbar,Alert,
     Paper,
-    Icon
+    Icon,
+    Checkbox,
+    FormControlLabel
 } from '@mui/material';
 
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -43,6 +45,7 @@ const Contacts = () => {
     const [dialogOpen, setDialogOpen] = useState(false)
     const [charCount, setCharCount] = useState(0)
     const [sent, setSent] = useState(false)
+    const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
     const defaultFormData = {
         name: "", 
@@ -53,11 +56,13 @@ const Contacts = () => {
     }
     const [formData, setFormData] = useState(defaultFormData)
     const maxChar = 255;   
+    const privacyPolicyUrl = `${process.env.PUBLIC_URL}/${config.privacyPolicy[language.id]}`
 
    
     const handleClose = () => {
         setDialogOpen(false)
         setFormData(defaultFormData)
+        setPrivacyAccepted(false)
     }
     const handleOpen = () => {
         setDialogOpen(true)
@@ -147,7 +152,16 @@ const Contacts = () => {
                         {getText(TEXT_KEYS.CONTACT_DIALOG_DESCRIPTION, language.id)}
                     </DialogContentText>
     
-                    <Stack container spacing={2} sx={{marginTop:5}}>
+                    <Stack
+                        container
+                        spacing={1.25}
+                        sx={{
+                            marginTop: 3,
+                            '& .MuiOutlinedInput-root': {
+                                borderRadius: 2,
+                            },
+                        }}
+                    >
                         <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_NAME, language.id)} required value={formData.name} onChange={handleChangeName}/>
                         <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_EMAIL, language.id)} required value={formData.email} onChange={handleChangeEmail}/>
                         <TextField label={getText(TEXT_KEYS.CONTACT_FIELD_NATIONALITY, language.id)} required value={formData.nationality} onChange={handleChangeNationality}/>
@@ -162,8 +176,44 @@ const Contacts = () => {
                             </Typography>
                         </Stack>
 
+                        <FormControlLabel
+                            sx={{
+                                alignItems: 'center',
+                                ml: 0,
+                                '& .MuiFormControlLabel-label': {
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    flexWrap: 'wrap',
+                                    gap: 0.5,
+                                },
+                            }}
+                            control={
+                                <Checkbox
+                                    checked={privacyAccepted}
+                                    onChange={(event) => setPrivacyAccepted(event.target.checked)}
+                                    sx={{ p: 0.75 }}
+                                />
+                            }
+                            label={
+                                <Typography component="span" variant="body2" sx={{ lineHeight: 1.4 }}>
+                                    {getText(TEXT_KEYS.CONTACT_PRIVACY_ACCEPT_PREFIX, language.id) + " "}
+                                    <Box
+                                        component="a"
+                                        href={privacyPolicyUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        sx={{ color: '#147f89', textDecoration: 'underline' }}
+                                        onClick={(event) => event.stopPropagation()}
+                                    >
+                                        {getText(TEXT_KEYS.PRIVACY_POLICY_LINK, language.id)}
+                                    </Box>
+                                </Typography>
+                            }
+                        />
+
                         <Button
                             onClick={handleSend}
+                            disabled={!privacyAccepted}
                             fullWidth
                             size="large"
                             variant='contained'

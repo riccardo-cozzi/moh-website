@@ -16,6 +16,7 @@ export const TEXT_KEYS = Object.freeze({
     CONTACT_FIELD_NATIONALITY: 'contact_field_nationality',
     CONTACT_FIELD_ORGANISATION: 'contact_field_organisation',
     CONTACT_FIELD_MESSAGE: 'contact_field_message',
+    CONTACT_PRIVACY_ACCEPT_PREFIX: 'contact_privacy_accept_prefix',
     CONTACT_SEND_BUTTON: 'contact_send_button',
     CONTACT_CARD_TITLE: 'contact_card_title',
     STORY_CLOSE_BUTTON: 'story_close_button',
@@ -135,6 +136,11 @@ const texts = {
         "ITA": "Il tuo messaggio",
         "ENG": "Your message",
         "ESP": "Tu mensaje"
+    },
+    [TEXT_KEYS.CONTACT_PRIVACY_ACCEPT_PREFIX]: {
+        "ITA": "Ho letto e accetto la",
+        "ENG": "I have read and accept the",
+        "ESP": "He leído y acepto la"
     },
     [TEXT_KEYS.CONTACT_SEND_BUTTON]: {
         "ITA": "Invia",

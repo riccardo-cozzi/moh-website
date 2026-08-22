@@ -9,7 +9,7 @@ import { Box } from '@mui/material';
 import Contacts from './Contacts';
 import config from '../config.json';
 import { useContext, useState } from 'react';
-import {DownloadDialog} from './DownloadDialog';
+import { DownloadDialog } from './DownloadDialog';
 import previousLogo from '../img/logo_transp.png';
 import { LanguageContext } from '../multilang/LanguageContext';
 import { getText, TEXT_KEYS } from '../multilang/Texts';
@@ -54,18 +54,15 @@ const Footer = () => {
                     onClick={() => setDownloadDialogOpen(true)}
                     aria-label="Download"
                     sx={{
-                    color: 'green',
-                    background: 'white',
-                    ':hover': { background: '#ddd' },
+                        color: 'green',
+                        background: 'white',
+                        ':hover': { background: '#ddd' },
                     }}
                 >
-                    <CloudDownloadIcon/>
+                    <CloudDownloadIcon />
                 </IconButton>
             </Stack>
 
-            <Box component="a" href={privacyPolicyUrl} target="_blank" rel="noopener noreferrer" sx={{ mt: 2, color: '#147f89', fontSize: '0.85rem' }}>
-                {getText(TEXT_KEYS.PRIVACY_POLICY_LINK, language.id)}
-            </Box>
 
             <Box
                 sx={{
@@ -90,6 +87,11 @@ const Footer = () => {
                 <span>Codice Fiscale: 93498900724</span>
                 <span>PEC: moh.organisation@pec.it</span>
                 <span>OID: 10033226</span>
+
+                <Box component="a" href={privacyPolicyUrl} target="_blank" rel="noopener noreferrer"
+                    sx={{ color: '#ffffff', fontSize: '0.85rem' }}>
+                    {getText(TEXT_KEYS.PRIVACY_POLICY_LINK, language.id)}
+                </Box>
             </Box>
 
             <DownloadDialog

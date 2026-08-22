@@ -24,11 +24,11 @@ const MarqueeTrack = ({ items, reverse = false }) => {
         <Box className="partners-marquee">
             <Box className={trackClassName}>
                 {doubleItems.map((image, index) => (
-                    <PartnerBox 
+                    <PartnerBox
                         key={`${image.alt}-${reverse ? 'rev' : 'fwd'}-${index}`}
-                        src={image.src} 
-                        href={image.url} 
-                        alt={image.alt} 
+                        src={image.src}
+                        href={image.url}
+                        alt={image.alt}
                     />
                 ))}
             </Box>
@@ -43,43 +43,41 @@ const Partners = () => {
     return (
         <>
             <Box marginBottom={1} sx={{ overflow: 'hidden', width: '100%' }}>
-                <Typography 
-                    variant="h3" 
-                    align='center' 
-                    sx={{ 
-                        fontSize: { xs: '1.8rem', sm: '3rem' }, 
-                        fontFamily: 'Neogen', 
-                        backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)', 
-                        WebkitBackgroundClip: 'text', 
-                        WebkitTextFillColor: 'transparent', 
-                        backgroundClip: 'text', 
-                        display: 'block' 
+                <Typography
+                    variant="h3"
+                    align='center'
+                    sx={{
+                        fontSize: { xs: '1.8rem', sm: '3rem' },
+                        fontFamily: 'Neogen',
+                        backgroundImage: 'linear-gradient(135deg, #2e7d32 0%, #0094ae 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        display: 'block'
                     }}
                 >
                     {getText(TEXT_KEYS.OUR_PARTNERSHIPS_TITLE, language.id)}
                 </Typography>
 
-                
-
-                {/* Uso del nuovo componente parametrizzato */}
                 <MarqueeTrack items={partners} />
                 <MarqueeTrack items={partners} reverse />
+                <Box sx={{ textAlign: 'center', mt: 1, mb: 8 }}>
+                    <Link
+                        component="button"
+                        type="button"
+                        onClick={() => setPartnersDialogOpen(true)}
+                        underline="hover"
+                        sx={{ color: '#147f89', fontWeight: 600, cursor: 'pointer' }}
+                    >
+                        {getText(TEXT_KEYS.SHOW_ALL_PARTNERS, language.id)}
+                    </Link>
+                </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 9, mb: 3 }}>
-                    <img src={erasmus} alt="Logo MOH" style={{ height: 80, objectFit: 'contain' }} />
+                    <img src={erasmus} alt="Erasmus+" style={{ height: 80, objectFit: 'contain' }} />
                 </Box>
             </Box>
 
-            <Box sx={{ textAlign: 'center', mt: 1, mb: 8 }}>
-                <Link 
-                    component="button" 
-                    type="button" 
-                    onClick={() => setPartnersDialogOpen(true)} 
-                    underline="hover" 
-                    sx={{ color: '#147f89', fontWeight: 600, cursor: 'pointer' }}
-                >
-                    {getText(TEXT_KEYS.SHOW_ALL_PARTNERS, language.id)}
-                </Link>
-            </Box>
+
 
             <PartnerListDialog open={partnersDialogOpen} onClose={() => setPartnersDialogOpen(false)} />
         </>
